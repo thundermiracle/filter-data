@@ -1,0 +1,11 @@
+# /node_modules/* and /bower_components/* ignored by default
+
+# ignore  settings
+.vscode/*
+.circleci
+
+# Ignore jest
+#test/**/*
+
+scripts/
+jest.config.*

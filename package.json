@@ -1,0 +1,63 @@
+{
+  "name": "filter-data",
+  "version": "0.1.0",
+  "description": "filter, sort data by transducer for datatable",
+  "keywords": [],
+  "author": "ThunderMiracle",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thundermiracle/filter-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thundermiracle/filter-data/issues"
+  },
+  "homepage": "https://github.com/thundermiracle/filter-data#readme",
+  "scripts": {
+    "eslint:src": "eslint src/**/*.{ts,tsx}",
+    "eslint:test": "eslint __test__/**/*.{ts,tsx}",
+    "eslint": "yarn eslint:src && yarn eslint:test",
+    "jest": "jest",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check -- --watch",
+    "test": "yarn type-check && yarn eslint && yarn jest && codecov",
+    "emit:types": "tsc --emitDeclarationOnly",
+    "build:types": "yarn emit:types",
+    "build:js": "tsc",
+    "prebuild": "rimraf dist/",
+    "build": "yarn build:types && yarn build:js",
+    "bundle": "webpack",
+    "bundle:w": "webpack -w"
+  },
+  "dependencies": {
+    "ramda": "0.26.1"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.2",
+    "@types/ramda": "^0.25.24",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "codecov": "^3.6.1",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.1.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
