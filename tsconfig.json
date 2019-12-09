@@ -3,7 +3,6 @@
     "outDir": "./lib/",
     "sourceMap": true,
     "target": "es5",
-    "module": "es2015",
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
