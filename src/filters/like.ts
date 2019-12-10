@@ -1,37 +1,39 @@
-import { SearchCondition, DataObject, DataPredicator } from '../constant/types';
+import { SearchCondition, DataObject } from '../lib/types';
 
 /**
- * return function like(data: object): boolean
+ * like check for data
  *
  * @param {*object} searchCondition: { name, value }
  * @param {*boolean} includeNull: false
  * @param {*boolean} caseSensitive: false
+ * @param {*DataObject} data
  */
-export default (
+const like = (
   searchCondition: SearchCondition,
-  includeNull = false,
-  caseSensitive = false,
-): DataPredicator => {
-  return function like(data: DataObject): boolean {
-    const { name, value } = searchCondition;
-    const targetValue = data[name];
+  includeNull: boolean,
+  caseSensitive: boolean,
+  data: DataObject,
+): boolean => {
+  const { name, value } = searchCondition;
+  const targetValue = data[name];
 
-    if (targetValue == null) {
-      return includeNull;
-    }
+  if (targetValue == null) {
+    return includeNull;
+  }
 
-    // disable like search if targetValue is array
-    if (Array.isArray(targetValue)) {
-      return false;
-    }
+  // disable like search if targetValue is array
+  if (Array.isArray(targetValue)) {
+    return false;
+  }
 
-    if (caseSensitive) {
-      return targetValue.toString().includes(value.toString());
-    }
+  if (caseSensitive) {
+    return targetValue.toString().includes(value.toString());
+  }
 
-    return targetValue
-      .toString()
-      .toUpperCase()
-      .includes(value.toString().toUpperCase());
-  };
+  return targetValue
+    .toString()
+    .toUpperCase()
+    .includes(value.toString().toUpperCase());
 };
+
+export default like;

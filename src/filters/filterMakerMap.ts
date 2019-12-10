@@ -1,21 +1,21 @@
-import SearchType from '../constant/SearchType';
+import SearchType from '../lib/SearchType';
 
-import equalMaker from './equal';
-import greaterMaker from './greater';
-import greaterEqualMaker from './greaterequal';
-import lessMaker from './less';
-import lessEqualMaker from './lessequal';
-import likeMaker from './like';
-import notEqualMaker from './notequal';
-import notLikeMaker from './notlike';
+import equal from './equal';
+import greater from './greater';
+import greaterOrEqual from './greaterOrEqual';
+import less from './less';
+import lessOrEqual from './lessOrEqual';
+import like from './like';
+import notEqual from './notEqual';
+import notLike from './notLike';
 
 export default {
-  [SearchType.EQ]: equalMaker,
-  [SearchType.GT]: greaterMaker,
-  [SearchType.GTE]: greaterEqualMaker,
-  [SearchType.LT]: lessMaker,
-  [SearchType.LTE]: lessEqualMaker,
-  [SearchType.LK]: likeMaker,
-  [SearchType.NE]: notEqualMaker,
-  [SearchType.NLK]: notLikeMaker,
+  [SearchType.EQ]: equal,
+  [SearchType.GT]: greater,
+  [SearchType.GTE]: greaterOrEqual,
+  [SearchType.LT]: less,
+  [SearchType.LTE]: lessOrEqual,
+  [SearchType.LK]: like,
+  [SearchType.NE]: notEqual,
+  [SearchType.NLK]: notLike,
 };

@@ -1,6 +1,6 @@
-import { listCombiner, compose, transduce, filter } from './utils/utils';
+import { listCombiner, compose, transduce, filter, curry } from './lib/utils';
+import { DataObject, SearchCondition } from './lib/types';
 import filterMakerMap from './filters/filterMakerMap';
-import { DataObject, SearchCondition } from './constant/types';
 
 const optionsDefault = { caseSensitive: false, includeNull: false };
 
@@ -17,10 +17,18 @@ function filterData(
   const options = { ...optionsDefault, ...optionsIn };
 
   const dataFilters = searchConditions.map(searchCondition => {
+    // get partial function
     const filterMaker = filterMakerMap[searchCondition.type];
 
+    // as any to prevent type check error
+    const curriedFilterMaker = curry(filterMaker) as any;
+
     return filter(
-      filterMaker(searchCondition, options.includeNull, options.caseSensitive),
+      curriedFilterMaker(
+        searchCondition,
+        options.includeNull,
+        options.caseSensitive,
+      ),
     );
   });
 

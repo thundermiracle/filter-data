@@ -1,40 +1,40 @@
-import { SearchCondition, DataObject, DataPredicator } from '../constant/types';
+import { SearchCondition, DataObject } from '../lib/types';
 
 /**
- * return function greater(data: object): boolean
+ * greater check for data
  *
  * @param {*object} searchCondition: { name, value }
  * @param {*boolean} includeNull: false
  * @param {*boolean} caseSensitive: false
+ * @param {*DataObject} data
  */
-export default (
+const greater = (
   { name, value }: SearchCondition,
-  includeNull = false,
-  caseSensitive = false,
-): DataPredicator => {
-  return function greater(data: DataObject): boolean {
-    const targetValue = data[name];
+  includeNull: boolean,
+  caseSensitive: boolean,
+  data: DataObject,
+): boolean => {
+  const targetValue = data[name];
 
-    if (targetValue == null) {
-      return includeNull;
-    }
+  if (targetValue == null) {
+    return includeNull;
+  }
 
-    // disable like search if targetValue is array
-    if (Array.isArray(targetValue)) {
-      return false;
-    }
+  // disable like search if targetValue is array
+  if (Array.isArray(targetValue)) {
+    return false;
+  }
 
-    // 数字の場合
-    if (!isNaN(+targetValue)) {
-      return +targetValue > +value;
-    }
+  // 数字の場合
+  if (!isNaN(+targetValue)) {
+    return +targetValue > +value;
+  }
 
-    if (caseSensitive) {
-      return targetValue > value;
-    }
+  if (caseSensitive) {
+    return targetValue > value;
+  }
 
-    return (
-      targetValue.toString().toUpperCase() > value.toString().toUpperCase()
-    );
-  };
+  return targetValue.toString().toUpperCase() > value.toString().toUpperCase();
 };
+
+export default greater;

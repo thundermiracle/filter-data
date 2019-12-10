@@ -1,14 +1,14 @@
-import like from './like';
+import less from './less';
 import { complement } from '../lib/utils';
 
 /**
- * not like check for data
+ * greater or equal check for data
  *
  * @param {*object} searchCondition: { name, value }
  * @param {*boolean} includeNull: false
  * @param {*boolean} caseSensitive: false
  * @param {*DataObject} data
  */
-const notLike = complement(like);
+const greaterOrEqual = complement(less);
 
-export default notLike;
+export default greaterOrEqual;

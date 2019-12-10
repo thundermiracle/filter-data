@@ -9,5 +9,3 @@ export interface SearchCondition {
 export interface DataObject {
   [key: string]: string | number | (string | number)[] | undefined;
 }
-
-export type DataPredicator = (data: DataObject) => boolean;

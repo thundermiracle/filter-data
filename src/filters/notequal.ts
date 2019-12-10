@@ -1,23 +1,21 @@
-import equalMaker from './equal';
-import { SearchCondition, DataObject, DataPredicator } from '../constant/types';
+import equal from './equal';
+import { complement } from '../lib/utils';
+import { SearchCondition, DataObject } from '../lib/types';
 
 /**
- * return function notequal(data: object): boolean
+ * not equal check for data
  *
  * @param {*object} searchCondition: { name, value }
  * @param {*boolean} includeNull: false
  * @param {*boolean} caseSensitive: false
+ * @param {*DataObject} data
  */
-export default (
+const notEqual = (
   searchCondition: SearchCondition,
-  includeNull = false,
-  caseSensitive = false,
-): DataPredicator => {
-  const euqal = equalMaker(searchCondition, includeNull, caseSensitive);
+  includeNull: boolean,
+  caseSensitive: boolean,
+  data: DataObject,
+): boolean =>
+  complement(equal)(searchCondition, includeNull, caseSensitive, data);
 
-  return function notequal(data: DataObject): boolean {
-    const euqalResult = euqal(data);
-
-    return !euqalResult;
-  };
-};
+export default notEqual;
