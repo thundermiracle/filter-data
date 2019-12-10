@@ -338,13 +338,17 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
 
-"@types/node@^12.12.2":
+"@types/node@^12.12.14":
   version "12.12.14"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.14.tgz#1c1d6e3c75dba466e0326948d56e8bd72a1903d2"
+  integrity sha512-u/SJDyXwuihpwjXy7hOOghagLEV1KdAST6syfnOk6QZAMzZuWZqXy5aYYZbh8Jdpd4escVFP0MvftHNDb9pruA==
 
-"@types/ramda@^0.25.24":
-  version "0.25.51"
-  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.25.51.tgz#d5421d0e190c56c64c112a761a85782fc971409d"
+"@types/ramda@^0.26.37":
+  version "0.26.37"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.26.37.tgz#8597ea168aad28492ef2fc38ff2ca0dd30e7bdb2"
+  integrity sha512-d7Sbem1NrImtk8VguPjC3CCmj8HRWFf8QwHWSSdqr/sTETuD+CFCf66JqJ6YMKxK+NRcPBnaGIcbakIrW6i+Qw==
+  dependencies:
+    ts-toolbelt "^4.12.0"
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
@@ -4740,6 +4744,11 @@ ts-loader@^6.2.1:
     loader-utils "^1.0.2"
     micromatch "^4.0.0"
     semver "^6.0.0"
+
+ts-toolbelt@^4.12.0:
+  version "4.12.13"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-4.12.13.tgz#a2fb92f16ef6e5828c16a8f403e1eaf87703160b"
+  integrity sha512-tnMgohN582PAv9u5xX8tsbdTzawRwyhvrg2r1qOgiAUOXB8ABGwYQeOh0qfE43wKF0ygvbBrM/CTZMED6ow5ZQ==
 
 tsconfig-paths@^3.9.0:
   version "3.9.0"

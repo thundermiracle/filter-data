@@ -1,5 +1,4 @@
-import * as R from 'ramda';
-
+import { listCombiner, compose, transduce, filter } from './utils/utils';
 import filterMakerMap from './filters/filterMakerMap';
 import { DataObject, SearchCondition } from './constant/types';
 
@@ -17,17 +16,17 @@ function filterData(
 ): DataObject[] {
   const options = { ...optionsDefault, ...optionsIn };
 
-  const filters = searchConditions.map(searchCondition => {
+  const dataFilters = searchConditions.map(searchCondition => {
     const filterMaker = filterMakerMap[searchCondition.type];
 
-    return R.filter(
+    return filter(
       filterMaker(searchCondition, options.includeNull, options.caseSensitive),
     );
   });
 
-  const filtersTrans = R.compose(...filters);
+  const filtersTrans = compose(...dataFilters);
 
-  return R.transduce(filtersTrans, R.flip(R.append), [])(allData);
+  return transduce(filtersTrans, listCombiner as any, [], allData);
 }
 
 export default filterData;
