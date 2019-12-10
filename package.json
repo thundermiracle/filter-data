@@ -24,11 +24,13 @@
     "test": "yarn type-check && yarn eslint && yarn jest && codecov",
     "emit:types": "tsc --emitDeclarationOnly",
     "build:types": "yarn emit:types",
-    "build:js": "tsc",
+    "build:js:module": "tsc",
+    "build:js:es": "tsc --project tsconfig.es.json",
+    "build:js": "yarn build:js:module && yarn build:js:es",
     "webpack:dev": "webpack --config webpack.dev.js",
     "webpack:prod": "webpack --config webpack.prod.js",
     "bundle": "yarn webpack:dev && yarn webpack:prod",
-    "prebuild": "rimraf lib/ && rimraf dist/",
+    "prebuild": "rimraf lib/ && rimraf dist/ && rimraf es/",
     "build": "yarn build:types && yarn build:js && yarn bundle"
   },
   "dependencies": {
