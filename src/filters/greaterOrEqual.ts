@@ -5,7 +5,6 @@ import { complement } from '../lib/utils';
  * greater or equal check for data
  *
  * @param {*object} searchCondition: { name, value }
- * @param {*boolean} includeNull: false
  * @param {*boolean} caseSensitive: false
  * @param {*DataObject} data
  */

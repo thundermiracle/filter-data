@@ -1,6 +1,6 @@
 import { listCombiner, compose, transduce, filter, curry } from './lib/utils';
 import { DataObject, SearchCondition } from './lib/types';
-import filterMakerMap from './filters/filterMakerMap';
+import { filtersMap, nullable } from './filters';
 
 const optionsDefault = { caseSensitive: false, includeNull: false };
 
@@ -8,6 +8,7 @@ const optionsDefault = { caseSensitive: false, includeNull: false };
  *
  * @param {*array} allData: Array of object
  * @param {*array} searchConditions
+ * @param {*object} optionsIn: { caseSensitive: false, includeNull: false }
  */
 function filterData(
   allData: DataObject[],
@@ -18,18 +19,25 @@ function filterData(
 
   const dataFilters = searchConditions.map(searchCondition => {
     // get partial function
-    const filterMaker = filterMakerMap[searchCondition.type];
+    const normalFilter = filtersMap[searchCondition.type];
 
+    // normal predicator
     // as any to prevent type check error
-    const curriedFilterMaker = curry(filterMaker) as any;
+    const curriedFilterPredicator = curry(normalFilter)(
+      searchCondition,
+      options.caseSensitive,
+    ) as any;
 
-    return filter(
-      curriedFilterMaker(
-        searchCondition,
-        options.includeNull,
-        options.caseSensitive,
-      ),
+    // operate before normal predicator if targetValue is null
+    const curriedIncludeNull = curry(nullable);
+
+    const predicator = curriedIncludeNull(
+      searchCondition,
+      options.includeNull,
+      curriedFilterPredicator,
     );
+
+    return filter(predicator);
   });
 
   const filtersTrans = compose(...dataFilters);

@@ -7,5 +7,11 @@ export interface SearchCondition {
 }
 
 export interface DataObject {
-  [key: string]: string | number | (string | number)[] | undefined;
+  [key: string]: string | number | (string | number)[];
 }
+
+export interface DataObjectWithNull {
+  [key: string]: string | number | (string | number)[] | undefined | null;
+}
+
+export type Predicator = (data: DataObject) => boolean;

@@ -4,22 +4,15 @@ import { SearchCondition, DataObject } from '../lib/types';
  * equal check for data
  *
  * @param {*object} searchCondition: { name, value }
- * @param {*boolean} includeNull: false
  * @param {*boolean} caseSensitive: false
  * @param {*DataObject} data
  */
-const like = (
+const equal = (
   { name, value }: SearchCondition,
-  includeNull: boolean,
   caseSensitive: boolean,
   data: DataObject,
 ): boolean => {
   const targetValue = data[name];
-
-  // value is null
-  if (targetValue == null) {
-    return includeNull;
-  }
 
   if (typeof targetValue === 'number') {
     return targetValue === +value;
@@ -42,4 +35,4 @@ const like = (
   return targetValue.toUpperCase() === value.toString().toUpperCase();
 };
 
-export default like;
+export default equal;
