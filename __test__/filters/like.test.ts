@@ -9,62 +9,14 @@ const searchDataArray = {
   fullName: ['Ben', 'Jackson'],
 };
 
-describe('test includeNull flag', () => {
-  test('includeNull=false', () => {
-    const result = like(
-      {
-        name: 'fullNameNotExist',
-        value: 'jack',
-        type: SearchType.LK,
-      },
-      false,
-      false,
-      searchDataString,
-    );
-
-    expect(result).toBe(false);
-  });
-
-  test('includeNull=true', () => {
-    const result = like(
-      {
-        name: 'fullName',
-        value: 'jack',
-        type: SearchType.LK,
-      },
-      true,
-      false,
-      searchDataString,
-    );
-
-    expect(result).toBe(true);
-  });
-});
-
 describe('test caseSensitive flag', () => {
-  test('caseSensitive=false', () => {
+  test('caseSensitive=true(partial same, different alphabet case) -> false', () => {
     const result = like(
       {
         name: 'fullName',
         value: 'jack',
         type: SearchType.LK,
       },
-      false,
-      false,
-      searchDataString,
-    );
-
-    expect(result).toBe(true);
-  });
-
-  test('caseSensitive=true(not exist)', () => {
-    const result = like(
-      {
-        name: 'fullName',
-        value: 'jack',
-        type: SearchType.LK,
-      },
-      false,
       true,
       searchDataString,
     );
@@ -72,14 +24,41 @@ describe('test caseSensitive flag', () => {
     expect(result).toBe(false);
   });
 
-  test('caseSensitive=true(exist)', () => {
+  test('caseSensitive=true(full same, different alphabet case) -> false', () => {
+    const result = like(
+      {
+        name: 'fullName',
+        value: 'ben jackson',
+        type: SearchType.LK,
+      },
+      true,
+      searchDataString,
+    );
+
+    expect(result).toBe(false);
+  });
+
+  test('caseSensitive=true(partial same, same alphabet case) -> true', () => {
     const result = like(
       {
         name: 'fullName',
         value: 'Jack',
         type: SearchType.LK,
       },
-      false,
+      true,
+      searchDataString,
+    );
+
+    expect(result).toBe(true);
+  });
+
+  test('caseSensitive=true(full same, same alphabet case) -> true', () => {
+    const result = like(
+      {
+        name: 'fullName',
+        value: 'Ben Jackson',
+        type: SearchType.LK,
+      },
       true,
       searchDataString,
     );
@@ -89,7 +68,35 @@ describe('test caseSensitive flag', () => {
 });
 
 describe('test searchCondition', () => {
-  test('value not exist', () => {
+  test('partial same -> true', () => {
+    const result = like(
+      {
+        name: 'fullName',
+        value: 'jack',
+        type: SearchType.LK,
+      },
+      false,
+      searchDataString,
+    );
+
+    expect(result).toBe(true);
+  });
+
+  test('full same -> true', () => {
+    const result = like(
+      {
+        name: 'fullName',
+        value: 'ben jackson',
+        type: SearchType.LK,
+      },
+      false,
+      searchDataString,
+    );
+
+    expect(result).toBe(true);
+  });
+
+  test('value not exist -> false', () => {
     const result = like(
       {
         name: 'fullName',
@@ -97,21 +104,19 @@ describe('test searchCondition', () => {
         type: SearchType.LK,
       },
       false,
-      false,
       searchDataString,
     );
 
     expect(result).toBe(false);
   });
 
-  test('target value is array', () => {
+  test('target value is array -> false', () => {
     const result = like(
       {
         name: 'fullName',
         value: 'Jack',
         type: SearchType.LK,
       },
-      false,
       false,
       searchDataArray,
     );
