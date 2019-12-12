@@ -11,8 +11,6 @@ function listCombiner(list: any[], val: any): any[] {
 function compose(...fns: Function[]) {
   return (...args: any[]) =>
     fns.reduceRight((prevBC, fn) => {
-      if (fn == null) return prevBC;
-
       if (!Array.isArray(prevBC)) prevBC = [prevBC];
 
       return fn(...prevBC);

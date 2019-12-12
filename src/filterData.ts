@@ -1,6 +1,7 @@
-import { listCombiner, compose, transduce, filter, curry } from './lib/utils';
+import { listCombiner, compose, transduce, filter } from './lib/utils';
 import { DataObject, SearchCondition } from './lib/types';
-import { filtersMap, nullable } from './filters';
+import filtersMap from './filters';
+import targetValueNull from './prefilters/targetValueNull';
 
 const optionsDefault = { caseSensitive: false, includeNull: false };
 
@@ -21,20 +22,12 @@ function filterData(
     // get partial function
     const normalFilter = filtersMap[searchCondition.type];
 
-    // normal predicator
-    // as any to prevent type check error
-    const curriedFilterPredicator = curry(normalFilter)(
+    // operate before normal predicator if targetValue is null
+    const predicator = targetValueNull(
+      options.includeNull,
+      normalFilter,
       searchCondition,
       options.caseSensitive,
-    ) as any;
-
-    // operate before normal predicator if targetValue is null
-    const curriedIncludeNull = curry(nullable);
-
-    const predicator = curriedIncludeNull(
-      searchCondition,
-      options.includeNull,
-      curriedFilterPredicator,
     );
 
     return filter(predicator);

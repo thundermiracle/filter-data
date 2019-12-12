@@ -14,4 +14,8 @@ export interface DataObjectWithNull {
   [key: string]: string | number | (string | number)[] | undefined | null;
 }
 
-export type Predicator = (data: DataObject) => boolean;
+export type Predicator = (
+  searchConditon: SearchCondition,
+  caseSensitive: boolean,
+  data: DataObject,
+) => boolean;

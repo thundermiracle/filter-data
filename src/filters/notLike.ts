@@ -1,5 +1,6 @@
 import like from './like';
 import { complement } from '../lib/utils';
+import targetValueArray from '../prefilters/targetValueArray';
 
 /**
  * not like check for data
@@ -8,6 +9,6 @@ import { complement } from '../lib/utils';
  * @param {*boolean} caseSensitive: false
  * @param {*DataObject} data
  */
-const notLike = complement(like);
+const notLike = targetValueArray(complement(like));
 
 export default notLike;
