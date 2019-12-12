@@ -22,8 +22,6 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "yarn type-check -- --watch",
     "test": "yarn type-check && yarn eslint && yarn jest && codecov",
-    "emit:types": "tsc --emitDeclarationOnly",
-    "build:types": "yarn emit:types",
     "build:js:module": "tsc",
     "build:js:es": "tsc --project tsconfig.es.json",
     "build:js": "yarn build:js:module && yarn build:js:es",
@@ -31,7 +29,7 @@
     "webpack:prod": "webpack --config webpack.prod.js",
     "bundle": "yarn webpack:dev && yarn webpack:prod",
     "prebuild": "rimraf lib/ && rimraf dist/ && rimraf es/",
-    "build": "yarn build:types && yarn build:js && yarn bundle"
+    "build": "yarn build:js && yarn bundle"
   },
   "dependencies": {
     "ramda": "0.26.1"
