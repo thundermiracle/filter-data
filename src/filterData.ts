@@ -1,9 +1,12 @@
 import { listCombiner, compose, transduce, filter } from './lib/utils';
-import { DataObject, SearchCondition } from './lib/types';
+import { DataObject, SearchCondition, FilterDataOption } from './lib/types';
 import filtersMap from './filters';
 import targetValueNull from './prefilters/targetValueNull';
 
-const optionsDefault = { caseSensitive: false, includeNull: false };
+const optionsDefault: FilterDataOption = {
+  caseSensitive: false,
+  includeNull: false,
+};
 
 /**
  *
@@ -14,7 +17,7 @@ const optionsDefault = { caseSensitive: false, includeNull: false };
 function filterData(
   allData: DataObject[],
   searchConditions: SearchCondition[],
-  optionsIn = {},
+  optionsIn: FilterDataOption = {},
 ): DataObject[] {
   const options = { ...optionsDefault, ...optionsIn };
 
@@ -24,10 +27,10 @@ function filterData(
 
     // operate before normal predicator if targetValue is null
     const predicator = targetValueNull(
-      options.includeNull,
+      options.includeNull!,
       normalFilter,
       searchCondition,
-      options.caseSensitive,
+      options.caseSensitive!,
     );
 
     return filter(predicator);

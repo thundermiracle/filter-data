@@ -1,5 +1,10 @@
 import SearchType from './SearchType';
 
+export interface FilterDataOption {
+  caseSensitive?: boolean;
+  includeNull?: boolean;
+}
+
 export interface SearchCondition {
   name: string;
   value: string | number;
