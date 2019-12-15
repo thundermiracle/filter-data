@@ -52,6 +52,7 @@ describe('like search', () => {
     expect(result).toEqual([
       {
         name: 'David Johnson',
+        middleName: 'Davjohn',
         age: 32,
       },
     ]);
@@ -85,9 +86,46 @@ describe('like search', () => {
     expect(result).toEqual([
       {
         name: 'David Johnson',
+        middleName: 'Davjohn',
         age: 32,
       },
     ]);
+  });
+});
+
+describe('key is string[]', () => {
+  test('or search have result', () => {
+    const searchConditions = [
+      {
+        key: ['name', 'middleName'],
+        value: 'ichj',
+        type: SearchType.LK,
+      },
+    ];
+
+    const result = filterData(data, searchConditions);
+
+    expect(result).toEqual([
+      {
+        name: 'Michael Johnson',
+        middleName: 'Michjohn',
+        age: 37,
+      },
+    ]);
+  });
+
+  test('or search have nothing', () => {
+    const searchConditions = [
+      {
+        key: ['name', 'middleName'],
+        value: 'Japan',
+        type: SearchType.LK,
+      },
+    ];
+
+    const result = filterData(data, searchConditions);
+
+    expect(result).toEqual([]);
   });
 });
 
@@ -111,6 +149,7 @@ describe('area search', () => {
     expect(result).toEqual([
       {
         name: 'David Johnson',
+        middleName: 'Davjohn',
         age: 32,
       },
     ]);

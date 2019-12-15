@@ -10,16 +10,14 @@ import {
  * is null check
  *
  * @param {*boolean} includeNull: false
- * @param {*Predicator} predicator: normal predicator
  * @param {*object} searchCondition: { name, value }
- * @param {*boolean} caseSensitive: false
+ * @param {*Predicator} predicator: normal predicator
  * @param {*DataObject} data
  */
 const targetValueIsNull = (
   includeNull: boolean,
-  predicator: Predicator,
   searchCondition: SearchCondition,
-  caseSensitive: boolean,
+  predicator: Predicator,
   data: DataObjectWithNull,
 ): boolean => {
   const { key } = searchCondition;
@@ -30,7 +28,7 @@ const targetValueIsNull = (
     return includeNull;
   }
 
-  return predicator(searchCondition, caseSensitive, data as DataObject);
+  return predicator(data as DataObject);
 };
 
 export default curry(targetValueIsNull);

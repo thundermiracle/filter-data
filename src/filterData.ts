@@ -1,5 +1,18 @@
-import { listCombiner, compose, transduce, filter } from './lib/utils';
-import { DataObject, SearchCondition, FilterDataOption } from './lib/types';
+import {
+  listCombiner,
+  compose,
+  transduce,
+  filter,
+  curry,
+  anyPass,
+} from './lib/utils';
+import {
+  DataObject,
+  SearchCondition,
+  FilterDataOption,
+  SearchConditionMultiple,
+  Predicator,
+} from './lib/types';
 import filtersMap from './filters';
 import targetValueNull from './prefilters/targetValueNull';
 
@@ -7,6 +20,25 @@ const optionsDefault: FilterDataOption = {
   caseSensitive: false,
   includeNull: false,
 };
+
+function makeSinglePredicator(
+  searchCondition: SearchCondition,
+  options: FilterDataOption,
+  curriedFilter: Function,
+): Predicator {
+  const partialPredicator = curriedFilter(
+    searchCondition,
+    options.caseSensitive!,
+  );
+
+  const predicator = targetValueNull(
+    options.includeNull!,
+    searchCondition,
+    partialPredicator,
+  );
+
+  return predicator;
+}
 
 /**
  *
@@ -16,22 +48,40 @@ const optionsDefault: FilterDataOption = {
  */
 function filterData(
   allData: DataObject[],
-  searchConditions: SearchCondition[],
+  searchConditions: SearchConditionMultiple[],
   optionsIn: FilterDataOption = {},
 ): DataObject[] {
   const options = { ...optionsDefault, ...optionsIn };
 
   const dataFilters = searchConditions.map(searchCondition => {
-    // get partial function
-    const normalFilter = filtersMap[searchCondition.type];
+    const { key, type } = searchCondition;
 
-    // operate before normal predicator if targetValue is null
-    const predicator = targetValueNull(
-      options.includeNull!,
-      normalFilter,
-      searchCondition,
-      options.caseSensitive!,
-    );
+    // get partial function
+    const curriedFilter = curry(filtersMap[type]);
+
+    // target key is one
+    let predicator;
+    if (typeof key === 'string') {
+      predicator = makeSinglePredicator(
+        searchCondition as SearchCondition,
+        options,
+        curriedFilter,
+      );
+    } else {
+      // or search for multiple keys
+      predicator = anyPass(
+        key.map(oneKey =>
+          makeSinglePredicator(
+            {
+              ...searchCondition,
+              key: oneKey,
+            },
+            options,
+            curriedFilter,
+          ),
+        ),
+      );
+    }
 
     return filter(predicator);
   });

@@ -16,13 +16,7 @@ describe('targetValue is null', () => {
   };
 
   test('includeNull=true -> true, predicator not called', () => {
-    const result = targetValueNull(
-      true,
-      predicatorTrue,
-      searchCondition,
-      false,
-      data,
-    );
+    const result = targetValueNull(true, searchCondition, predicatorTrue, data);
 
     expect(result).toBe(true);
     expect(predicatorTrue.mock.calls.length).toBe(0);
@@ -31,9 +25,8 @@ describe('targetValue is null', () => {
   test('includeNull=false -> false, predicator not called', () => {
     const result = targetValueNull(
       false,
-      predicatorTrue,
       searchCondition,
-      false,
+      predicatorTrue,
       data,
     );
 
@@ -50,45 +43,33 @@ describe('targetValue is exist', () => {
   };
 
   test('includeNull=true, predicator returns true -> true, predicator called', () => {
-    const result = targetValueNull(
-      true,
-      predicatorTrue,
-      searchCondition,
-      true,
-      data,
-    );
+    const result = targetValueNull(true, searchCondition, predicatorTrue, data);
 
     expect(result).toBe(true);
-    expect(predicatorTrue.mock.calls[0]).toEqual([searchCondition, true, data]);
+    expect(predicatorTrue.mock.calls[0]).toEqual([data]);
   });
 
   test('includeNull=false, predicator returns true -> true, predicator called', () => {
     const result = targetValueNull(
       false,
-      predicatorTrue,
       searchCondition,
-      true,
+      predicatorTrue,
       data,
     );
 
     expect(result).toBe(true);
-    expect(predicatorTrue.mock.calls[0]).toEqual([searchCondition, true, data]);
+    expect(predicatorTrue.mock.calls[0]).toEqual([data]);
   });
 
   test('predicator returns false -> false, predicator called', () => {
     const result = targetValueNull(
       false,
-      predicatorFalse,
       searchCondition,
-      false,
+      predicatorFalse,
       data,
     );
 
     expect(result).toBe(false);
-    expect(predicatorFalse.mock.calls[0]).toEqual([
-      searchCondition,
-      false,
-      data,
-    ]);
+    expect(predicatorFalse.mock.calls[0]).toEqual([data]);
   });
 });

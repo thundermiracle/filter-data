@@ -1,4 +1,4 @@
-import { transduce, filter, curry, complement, allPass } from 'ramda';
+import { transduce, filter, curry, complement, allPass, anyPass } from 'ramda';
 
 // use impure combiner to speed up
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -17,4 +17,13 @@ function compose(...fns: Function[]) {
     }, args);
 }
 
-export { listCombiner, compose, transduce, filter, curry, complement, allPass };
+export {
+  listCombiner,
+  compose,
+  transduce,
+  filter,
+  curry,
+  complement,
+  allPass,
+  anyPass,
+};
