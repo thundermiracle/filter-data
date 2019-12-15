@@ -22,8 +22,8 @@ const targetValueIsNull = (
   caseSensitive: boolean,
   data: DataObjectWithNull,
 ): boolean => {
-  const { name } = searchCondition;
-  const targetValue = data[name];
+  const { key } = searchCondition;
+  const targetValue = data[key];
 
   // value is null or undefined
   if (targetValue == null) {

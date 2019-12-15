@@ -17,7 +17,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(different alphabet case, compare to lowercase) -> true', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'abcdEfg',
         type: SearchType.LT,
       },
@@ -31,7 +31,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(different alphabet case, compare to uppercase) -> false', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ABcdEfg',
         type: SearchType.LT,
       },
@@ -45,7 +45,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(same alphabet case, same string) -> true', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'AbcdEfg',
         type: SearchType.GTE,
       },
@@ -61,7 +61,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string same if caseInSensitive) -> true', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ABcdEfg',
         type: SearchType.LT,
       },
@@ -75,7 +75,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string is bigger if caseSensitive) -> true', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ACcdEfg',
         type: SearchType.LT,
       },
@@ -89,7 +89,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string is smaller if caseSensitive) -> false', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Abcdeff',
         type: SearchType.LT,
       },
@@ -103,7 +103,7 @@ describe('test searchCondition', () => {
   test('target value is array -> false', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'AbcdCfg',
         type: SearchType.LT,
       },
@@ -117,7 +117,7 @@ describe('test searchCondition', () => {
   test('target value is number(smaller) -> true', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34223,
         type: SearchType.LT,
       },
@@ -131,7 +131,7 @@ describe('test searchCondition', () => {
   test('target value is number(bigger) -> false', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34023,
         type: SearchType.LT,
       },
@@ -145,7 +145,7 @@ describe('test searchCondition', () => {
   test('target value is number(equal) -> true', () => {
     const result = lessOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34123,
         type: SearchType.LT,
       },

@@ -8,11 +8,11 @@ import { SearchCondition, DataObject } from '../lib/types';
  * @param {*DataObject} data
  */
 const equal = (
-  { name, value }: SearchCondition,
+  { key, value }: SearchCondition,
   caseSensitive: boolean,
   data: DataObject,
 ): boolean => {
-  const targetValue = data[name];
+  const targetValue = data[key];
 
   if (typeof targetValue === 'number') {
     return targetValue === +value;

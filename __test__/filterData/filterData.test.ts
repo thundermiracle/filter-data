@@ -7,7 +7,7 @@ describe('includeNull', () => {
   test('includeNull=true', () => {
     const searchConditions = [
       {
-        name: 'name',
+        key: 'name',
         value: 'not exist',
         type: SearchType.EQ,
       },
@@ -25,7 +25,7 @@ describe('includeNull', () => {
   test('includeNull=false', () => {
     const searchConditions = [
       {
-        name: 'name',
+        key: 'name',
         value: 'not exist',
         type: SearchType.EQ,
       },
@@ -41,7 +41,7 @@ describe('like search', () => {
   test('caseSensitive=false', () => {
     const searchConditions = [
       {
-        name: 'name',
+        key: 'name',
         value: 'dav',
         type: SearchType.LK,
       },
@@ -60,7 +60,7 @@ describe('like search', () => {
   test('caseSensitive=true(not exist)', () => {
     const searchConditions = [
       {
-        name: 'name',
+        key: 'name',
         value: 'dav',
         type: SearchType.LK,
       },
@@ -74,7 +74,7 @@ describe('like search', () => {
   test('caseSensitive=true(exist)', () => {
     const searchConditions = [
       {
-        name: 'name',
+        key: 'name',
         value: 'Dav',
         type: SearchType.LK,
       },
@@ -95,12 +95,12 @@ describe('area search', () => {
   test('greater than + less than', () => {
     const searchConditions = [
       {
-        name: 'age',
+        key: 'age',
         value: 25,
         type: SearchType.GT,
       },
       {
-        name: 'age',
+        key: 'age',
         value: 34,
         type: SearchType.LTE,
       },

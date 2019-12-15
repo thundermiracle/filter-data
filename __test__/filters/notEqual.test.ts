@@ -21,7 +21,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(same string, different alphabet case) -> true', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ben jackson',
         type: SearchType.NE,
       },
@@ -35,7 +35,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(same string, same alphabet case) -> false', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Ben Jackson',
         type: SearchType.NE,
       },
@@ -49,7 +49,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(exist in array, different alphabet case) -> true', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'jackson',
         type: SearchType.NE,
       },
@@ -63,7 +63,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(target value is array of number(value is string number, same)) -> true', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: '123',
         type: SearchType.NE,
       },
@@ -79,7 +79,7 @@ describe('test searchCondition', () => {
   test('same string, different alphabet case -> false', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ben jackson',
         type: SearchType.NE,
       },
@@ -93,7 +93,7 @@ describe('test searchCondition', () => {
   test('exist in array, different alphabet case -> false', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'jackson',
         type: SearchType.NE,
       },
@@ -107,7 +107,7 @@ describe('test searchCondition', () => {
   test('target value is number(value is number, same) -> false', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 123.456,
         type: SearchType.NE,
       },
@@ -121,7 +121,7 @@ describe('test searchCondition', () => {
   test('target value is number(value is number, not same) -> true', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 123.356,
         type: SearchType.NE,
       },
@@ -135,7 +135,7 @@ describe('test searchCondition', () => {
   test('target value is number(value is string number, same) -> false', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: '123.456',
         type: SearchType.NE,
       },
@@ -149,7 +149,7 @@ describe('test searchCondition', () => {
   test('target value is number(value is string number, not same) -> true', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: '123.356',
         type: SearchType.NE,
       },
@@ -163,7 +163,7 @@ describe('test searchCondition', () => {
   test('target value is array of number(value is number, same) -> false', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 123,
         type: SearchType.NE,
       },
@@ -177,7 +177,7 @@ describe('test searchCondition', () => {
   test('target value is array of number(value is string number, same) -> false', () => {
     const result = notEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: '123',
         type: SearchType.NE,
       },

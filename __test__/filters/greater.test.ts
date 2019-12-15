@@ -17,7 +17,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(different alphabet case, compare to lowercase) -> false', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'abcdEfg',
         type: SearchType.GT,
       },
@@ -31,7 +31,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(different alphabet case, compare to uppercase) -> true', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ABcdEfg',
         type: SearchType.GT,
       },
@@ -47,7 +47,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string same if caseInSensitive) -> false', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ABcdEfg',
         type: SearchType.GT,
       },
@@ -61,7 +61,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string is bigger if caseSensitive) -> false', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ACcdEfg',
         type: SearchType.GT,
       },
@@ -75,7 +75,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string is smaller if caseSensitive) -> true', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Abcdeff',
         type: SearchType.GT,
       },
@@ -89,7 +89,7 @@ describe('test searchCondition', () => {
   test('target value is array', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'AbcdCfg',
         type: SearchType.GT,
       },
@@ -103,7 +103,7 @@ describe('test searchCondition', () => {
   test('target value is number(smaller) -> false', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34223,
         type: SearchType.GT,
       },
@@ -117,7 +117,7 @@ describe('test searchCondition', () => {
   test('target value is number(bigger) -> true', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34023,
         type: SearchType.GT,
       },
@@ -131,7 +131,7 @@ describe('test searchCondition', () => {
   test('target value is number(equal) -> false', () => {
     const result = greater(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34123,
         type: SearchType.GT,
       },

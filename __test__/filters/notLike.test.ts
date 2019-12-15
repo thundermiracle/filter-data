@@ -13,7 +13,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(partial same, different alphabet case) -> true', () => {
     const result = notLike(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'jack',
         type: SearchType.NLK,
       },
@@ -27,7 +27,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(full same, different alphabet case) -> true', () => {
     const result = notLike(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ben jackson',
         type: SearchType.NLK,
       },
@@ -41,7 +41,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(partial same, same alphabet case) -> false', () => {
     const result = notLike(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Jack',
         type: SearchType.NLK,
       },
@@ -55,7 +55,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(full same, same alphabet case) -> false', () => {
     const result = notLike(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Ben Jackson',
         type: SearchType.NLK,
       },
@@ -71,7 +71,7 @@ describe('test searchCondition', () => {
   test('partial same -> false', () => {
     const result = notLike(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'jack',
         type: SearchType.NLK,
       },
@@ -85,7 +85,7 @@ describe('test searchCondition', () => {
   test('full same -> false', () => {
     const result = notLike(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ben jackson',
         type: SearchType.NLK,
       },
@@ -99,7 +99,7 @@ describe('test searchCondition', () => {
   test('value not exist -> true', () => {
     const result = notLike(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'pack',
         type: SearchType.NLK,
       },
@@ -113,7 +113,7 @@ describe('test searchCondition', () => {
   test('target value is array -> false', () => {
     const result = notLike(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Jack',
         type: SearchType.NLK,
       },

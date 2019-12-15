@@ -10,7 +10,7 @@ const data = {
 
 describe('targetValue is null', () => {
   const searchCondition = {
-    name: 'NotExist',
+    key: 'NotExist',
     value: 'dummy',
     type: SearchType.EQ,
   };
@@ -44,7 +44,7 @@ describe('targetValue is null', () => {
 
 describe('targetValue is exist', () => {
   const searchCondition = {
-    name: 'fullName',
+    key: 'fullName',
     value: 'dummy',
     type: SearchType.EQ,
   };

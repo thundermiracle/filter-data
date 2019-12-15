@@ -17,7 +17,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(different alphabet case, compare to lowercase) -> false', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'abcdEfg',
         type: SearchType.GTE,
       },
@@ -31,7 +31,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(different alphabet case, compare to uppercase) -> true', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ABcdEfg',
         type: SearchType.GTE,
       },
@@ -45,7 +45,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(same alphabet case, same string) -> true', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'AbcdEfg',
         type: SearchType.GTE,
       },
@@ -61,7 +61,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string same if caseInSensitive) -> true', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ABcdEfg',
         type: SearchType.GTE,
       },
@@ -75,7 +75,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string is bigger if caseSensitive) -> false', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ACcdEfg',
         type: SearchType.GTE,
       },
@@ -89,7 +89,7 @@ describe('test searchCondition', () => {
   test('different alphabet case is ignored(string is smaller if caseSensitive) -> true', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Abcdeff',
         type: SearchType.GTE,
       },
@@ -103,7 +103,7 @@ describe('test searchCondition', () => {
   test('target value is array', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'AbcdCfg',
         type: SearchType.GTE,
       },
@@ -117,7 +117,7 @@ describe('test searchCondition', () => {
   test('target value is number(smaller) -> false', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34223,
         type: SearchType.GTE,
       },
@@ -131,7 +131,7 @@ describe('test searchCondition', () => {
   test('target value is number(bigger) -> true', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34023,
         type: SearchType.GTE,
       },
@@ -145,7 +145,7 @@ describe('test searchCondition', () => {
   test('target value is number(equal) -> true', () => {
     const result = greaterOrEqual(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 34123,
         type: SearchType.GTE,
       },

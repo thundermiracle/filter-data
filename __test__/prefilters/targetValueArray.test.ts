@@ -11,7 +11,7 @@ const data = {
 
 describe('targetValue is array', () => {
   const searchCondition = {
-    name: 'fullNameArray',
+    key: 'fullNameArray',
     value: 'dummy',
     type: SearchType.LT,
   };
@@ -31,7 +31,7 @@ describe('targetValue is array', () => {
 
 describe('targetValue is not array', () => {
   const searchCondition = {
-    name: 'fullName',
+    key: 'fullName',
     value: 'dummy',
     type: SearchType.LT,
   };

@@ -15,8 +15,8 @@ const excludeIfTargetValueIsArray = (
   caseSensitive: boolean,
   data: DataObject,
 ): boolean => {
-  const { name } = searchCondition;
-  const targetValue = data[name];
+  const { key } = searchCondition;
+  const targetValue = data[key];
 
   if (Array.isArray(targetValue)) {
     return false;

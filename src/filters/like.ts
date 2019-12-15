@@ -12,8 +12,8 @@ const like = (
   caseSensitive: boolean,
   data: DataObject,
 ): boolean => {
-  const { name, value } = searchCondition;
-  const targetValue = data[name];
+  const { key, value } = searchCondition;
+  const targetValue = data[key];
 
   // disable like search if targetValue is array
   if (Array.isArray(targetValue)) {

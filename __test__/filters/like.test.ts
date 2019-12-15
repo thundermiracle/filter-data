@@ -13,7 +13,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(partial same, different alphabet case) -> false', () => {
     const result = like(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'jack',
         type: SearchType.LK,
       },
@@ -27,7 +27,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(full same, different alphabet case) -> false', () => {
     const result = like(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ben jackson',
         type: SearchType.LK,
       },
@@ -41,7 +41,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(partial same, same alphabet case) -> true', () => {
     const result = like(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Jack',
         type: SearchType.LK,
       },
@@ -55,7 +55,7 @@ describe('test caseSensitive flag', () => {
   test('caseSensitive=true(full same, same alphabet case) -> true', () => {
     const result = like(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Ben Jackson',
         type: SearchType.LK,
       },
@@ -71,7 +71,7 @@ describe('test searchCondition', () => {
   test('partial same -> true', () => {
     const result = like(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'jack',
         type: SearchType.LK,
       },
@@ -85,7 +85,7 @@ describe('test searchCondition', () => {
   test('full same -> true', () => {
     const result = like(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'ben jackson',
         type: SearchType.LK,
       },
@@ -99,7 +99,7 @@ describe('test searchCondition', () => {
   test('value not exist -> false', () => {
     const result = like(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'pack',
         type: SearchType.LK,
       },
@@ -113,7 +113,7 @@ describe('test searchCondition', () => {
   test('target value is array -> false', () => {
     const result = like(
       {
-        name: 'fullName',
+        key: 'fullName',
         value: 'Jack',
         type: SearchType.LK,
       },

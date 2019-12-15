@@ -8,11 +8,11 @@ import { SearchCondition, DataObject } from '../lib/types';
  * @param {*DataObject} data
  */
 const greater = (
-  { name, value }: SearchCondition,
+  { key, value }: SearchCondition,
   caseSensitive: boolean,
   data: DataObject,
 ): boolean => {
-  const targetValue = data[name];
+  const targetValue = data[key];
 
   // disable like search if targetValue is array
   if (Array.isArray(targetValue)) {

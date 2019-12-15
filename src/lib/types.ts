@@ -6,7 +6,7 @@ export interface FilterDataOption {
 }
 
 export interface SearchCondition {
-  name: string;
+  key: string;
   value: string | number;
   type: SearchType;
 }
