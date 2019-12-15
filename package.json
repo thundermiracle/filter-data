@@ -19,7 +19,7 @@
     "eslint:test": "eslint __test__/**/*.{ts,tsx}",
     "eslint": "yarn eslint:src && yarn eslint:test",
     "jest": "jest",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --noEmit --project tsconfig.eslint.json",
     "type-check:watch": "yarn type-check -- --watch",
     "test": "yarn type-check && yarn eslint && yarn jest && codecov",
     "build:js:module": "tsc",
