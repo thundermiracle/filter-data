@@ -155,3 +155,119 @@ describe('area search', () => {
     ]);
   });
 });
+
+describe('offset, limit', () => {
+  test('offset is undefined, limit 1', () => {
+    const searchConditions = [
+      {
+        key: 'age',
+        value: 20,
+        type: SearchType.GT,
+      },
+    ];
+
+    const result = filterData(data, searchConditions, { limit: 1 });
+
+    expect(result).toEqual([
+      {
+        name: 'Anny Johnson',
+        middleName: 'Anjohn',
+        age: 21,
+      },
+      {
+        name: 'David Johnson',
+        middleName: 'Davjohn',
+        age: 32,
+      },
+      {
+        name: 'Michael Johnson',
+        middleName: 'Michjohn',
+        age: 37,
+      },
+    ]);
+  });
+
+  test('limit is undefined, offset 2', () => {
+    const searchConditions = [
+      {
+        key: 'age',
+        value: 20,
+        type: SearchType.GT,
+      },
+    ];
+
+    const result = filterData(data, searchConditions, { offset: 2 });
+
+    expect(result).toEqual([
+      {
+        name: 'Anny Johnson',
+        middleName: 'Anjohn',
+        age: 21,
+      },
+      {
+        name: 'David Johnson',
+        middleName: 'Davjohn',
+        age: 32,
+      },
+      {
+        name: 'Michael Johnson',
+        middleName: 'Michjohn',
+        age: 37,
+      },
+    ]);
+  });
+
+  test('offset 2, limit 1', () => {
+    const searchConditions = [
+      {
+        key: 'age',
+        value: 20,
+        type: SearchType.GT,
+      },
+    ];
+
+    const result = filterData(data, searchConditions, { offset: 2, limit: 1 });
+
+    expect(result).toEqual([
+      {
+        name: 'Michael Johnson',
+        middleName: 'Michjohn',
+        age: 37,
+      },
+    ]);
+  });
+
+  test('offset 2, limit 10 -> return 2~last', () => {
+    const searchConditions = [
+      {
+        key: 'age',
+        value: 20,
+        type: SearchType.GT,
+      },
+    ];
+
+    const result = filterData(data, searchConditions, { offset: 2, limit: 10 });
+
+    expect(result).toEqual([
+      {
+        name: 'Michael Johnson',
+        middleName: 'Michjohn',
+        age: 37,
+      },
+    ]);
+  });
+
+  test('offset 10, limit 1 -> []', () => {
+    const searchConditions = [
+      {
+        key: 'age',
+        value: 20,
+        type: SearchType.GT,
+      },
+    ];
+
+    const result = filterData(data, searchConditions, { offset: 10, limit: 1 });
+
+    expect(result).toEqual([]);
+  });
+});

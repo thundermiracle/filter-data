@@ -5,6 +5,8 @@ import {
   filter,
   curry,
   anyPass,
+  drop,
+  take,
 } from './lib/utils';
 import {
   DataObject,
@@ -44,7 +46,7 @@ function makeSinglePredicator(
  *
  * @param {*array} allData: Array of object
  * @param {*array} searchConditions
- * @param {*object} optionsIn: { caseSensitive: false, includeNull: false }
+ * @param {*object} optionsIn: { caseSensitive: false, includeNull: false, offset: undefined, limit: undefined }
  */
 function filterData(
   allData: DataObject[],
@@ -85,6 +87,12 @@ function filterData(
 
     return filter(predicator);
   });
+
+  // pagination
+  if (options.offset != null && options.limit != null) {
+    dataFilters.push(drop(options.offset));
+    dataFilters.push(take(options.limit));
+  }
 
   const filtersTrans = compose(...dataFilters);
 

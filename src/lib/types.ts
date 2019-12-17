@@ -3,6 +3,8 @@ import SearchType from './SearchType';
 export interface FilterDataOption {
   caseSensitive?: boolean;
   includeNull?: boolean;
+  offset?: number;
+  limit?: number;
 }
 
 export interface SearchCondition {

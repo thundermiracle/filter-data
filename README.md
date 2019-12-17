@@ -11,7 +11,6 @@
 
 filter and slice data array.
 
-
 ## Installation
 
 filter-data is available as an [npm package](https://www.npmjs.org/package/filter-data).
@@ -97,13 +96,38 @@ npm install --save filter-data
     ] -->
     ```
 
+1. offset & limit.
+
+    ```js
+    import filterData, { SearchType } from 'filter-data';
+
+    // search firstName contains 'dan'
+    const searchConditions = [
+      {
+        key: 'firstName',
+        value: 'dan',
+        type: SearchType.LK,
+      },
+    ];
+
+    const result = filterData(data, searchConditions, { caseSensitive: true, offset: 10, limit: 10 });
+    // output:
+    <!-- [
+      { firstName: 'Jordan', age: 17 },
+      .
+      .
+      .
+      max 10 records
+    ] -->
+    ```
+
 ## Instructions
 
 | No.   |      Parameter      | required | Default | Description |
 |:---|:-------------:|:---------:|:--------------|:-----------|
 | 1 |  data | 〇 | | array of object for filtering |
 | 2 |  searchConditions | 〇 | | array of searchCondition; ```{ key: 'search column', value: 'search value', type: 'search type' }``` |
-| 3 |  options |  | ```{ caseSensitive: false, includeNull: false }``` |  |
+| 3 |  options |  | ```{ caseSensitive: false, includeNull: false, offset: undefined, limit: undefined }``` |  |
 
 ### SearchType
 

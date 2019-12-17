@@ -1,4 +1,13 @@
-import { transduce, filter, curry, complement, allPass, anyPass } from 'ramda';
+import {
+  transduce,
+  filter,
+  curry,
+  complement,
+  allPass,
+  anyPass,
+  drop,
+  take,
+} from 'ramda';
 
 // use impure combiner to speed up
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -26,4 +35,6 @@ export {
   complement,
   allPass,
   anyPass,
+  drop,
+  take,
 };
