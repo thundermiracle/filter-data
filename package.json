@@ -6,6 +6,10 @@
   "author": "ThunderMiracle",
   "license": "MIT",
   "main": "lib/index.js",
+  "files": [
+    "lib",
+    "es"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thundermiracle/filter-data.git"

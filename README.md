@@ -24,7 +24,7 @@ npm install --save filter-data
 1. search single key only.
 
     ```js
-    import filterData, { SearchType } from 'filter-data';
+    import { filterData, SearchType } from 'filter-data';
 
     // search firstName contains 'dan' and age < 20
     const searchConditions = [
@@ -51,7 +51,7 @@ npm install --save filter-data
 1. search multiple keys.
 
     ```js
-    import filterData, { SearchType } from 'filter-data';
+    import { filterData, SearchType } from 'filter-data';
 
     // search firstName&lastName contains 'dan' and age < 20
     const searchConditions = [
@@ -78,7 +78,7 @@ npm install --save filter-data
 1. caseSensitive.
 
     ```js
-    import filterData, { SearchType } from 'filter-data';
+    import { filterData, SearchType } from 'filter-data';
 
     // search firstName contains 'dan'
     const searchConditions = [
@@ -99,7 +99,7 @@ npm install --save filter-data
 1. offset & limit.
 
     ```js
-    import filterData, { SearchType } from 'filter-data';
+    import { filterData, SearchType } from 'filter-data';
 
     // search firstName contains 'dan'
     const searchConditions = [
