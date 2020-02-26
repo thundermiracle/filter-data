@@ -53,9 +53,18 @@ function filterData(
   searchConditions: SearchConditionMultiple[],
   optionsIn: FilterDataOption = {},
 ): DataObject[] {
+  const searchConditionsValNotEmpty = searchConditions.filter(
+    ({ value }: SearchConditionMultiple) => value !== '' && value != null,
+  );
+
+  // return directly when no conditions available
+  if (searchConditionsValNotEmpty.length === 0) {
+    return allData;
+  }
+
   const options = { ...optionsDefault, ...optionsIn };
 
-  const dataFilters = searchConditions.map(searchCondition => {
+  const dataFilters = searchConditionsValNotEmpty.map(searchCondition => {
     const { key, type } = searchCondition;
 
     // get partial function
@@ -75,8 +84,9 @@ function filterData(
         key.map(oneKey =>
           makeSinglePredicator(
             {
-              ...searchCondition,
               key: oneKey,
+              value: searchCondition.value!,
+              type: searchCondition.type,
             },
             options,
             curriedFilter,

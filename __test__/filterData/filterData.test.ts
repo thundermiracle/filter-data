@@ -1,5 +1,6 @@
-import filterData from '../../src/filterData';
+import * as utils from '../../src/lib/utils';
 
+import filterData from '../../src/filterData';
 import data from './data.json';
 import SearchType from '../../src/lib/SearchType';
 
@@ -269,5 +270,55 @@ describe('offset, limit', () => {
     const result = filterData(data, searchConditions, { offset: 10, limit: 1 });
 
     expect(result).toEqual([]);
+  });
+});
+
+describe('no available SearchConditions should return immediately', () => {
+  // const currySpy = jest.spyOn(utils, 'curry');
+
+  test('value is empty, null, undefined', () => {
+    const searchConditions = [
+      {
+        key: 'name',
+        value: '',
+        type: SearchType.LK,
+      },
+      {
+        key: 'name',
+        value: undefined,
+        type: SearchType.LK,
+      },
+    ];
+
+    const result = filterData(data, searchConditions);
+
+    expect(result).toEqual(data);
+  });
+
+  test('mixed value with empty string and exist one', () => {
+    const searchConditions = [
+      {
+        key: 'middleName',
+        value: '',
+        type: SearchType.LK,
+      },
+      {
+        key: 'name',
+        value: 'Dav',
+        type: SearchType.LK,
+      },
+    ];
+
+    const result = filterData(data, searchConditions, { caseSensitive: true });
+
+    // expect(currySpy).toHaveBeenCalledTimes(1);
+
+    expect(result).toEqual([
+      {
+        name: 'David Johnson',
+        middleName: 'Davjohn',
+        age: 32,
+      },
+    ]);
   });
 });
