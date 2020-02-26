@@ -322,3 +322,19 @@ describe('no available SearchConditions should return immediately', () => {
     ]);
   });
 });
+
+describe('key is not exist', () => {
+  test('key is not exist only', () => {
+    const searchConditions = [
+      {
+        key: 'name1',
+        value: 'D',
+        type: SearchType.LK,
+      },
+    ];
+
+    const result = filterData(data, searchConditions, { includeNull: true });
+
+    expect(result).toEqual(data);
+  });
+});
