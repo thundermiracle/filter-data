@@ -9,7 +9,6 @@ import {
   take,
 } from './lib/utils';
 import {
-  DataObject,
   SearchCondition,
   FilterDataOption,
   SearchConditionMultiple,
@@ -48,18 +47,18 @@ function makeSinglePredicator(
  * @param {*array} searchConditions
  * @param {*object} optionsIn: { caseSensitive: false, includeNull: false, offset: undefined, limit: undefined }
  */
-function filterData(
-  allData: DataObject[],
+function filterData<T>(
+  allData: ReadonlyArray<T>,
   searchConditions: SearchConditionMultiple[],
   optionsIn: FilterDataOption = {},
-): DataObject[] {
+): T[] {
   const searchConditionsValNotEmpty = searchConditions.filter(
     ({ value }: SearchConditionMultiple) => value !== '' && value != null,
   );
 
   // return directly when no conditions available
   if (searchConditionsValNotEmpty.length === 0) {
-    return allData;
+    return [...allData];
   }
 
   const options = { ...optionsDefault, ...optionsIn };
