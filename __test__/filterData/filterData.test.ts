@@ -1,8 +1,10 @@
 import * as utils from '../../src/lib/utils';
 
 import filterData from '../../src/filterData';
-import data from './data.json';
 import SearchType from '../../src/lib/SearchType';
+import data from './data.json';
+
+const listCombinerSpy = jest.spyOn(utils, 'listCombiner');
 
 describe('includeNull', () => {
   test('includeNull=true', () => {
@@ -274,7 +276,9 @@ describe('offset, limit', () => {
 });
 
 describe('no available SearchConditions should return immediately', () => {
-  // const currySpy = jest.spyOn(utils, 'curry');
+  beforeEach(() => {
+    listCombinerSpy.mockClear();
+  });
 
   test('value is empty, null, undefined', () => {
     const searchConditions = [
@@ -292,6 +296,8 @@ describe('no available SearchConditions should return immediately', () => {
 
     const result = filterData(data, searchConditions);
 
+    // return immediately
+    expect(listCombinerSpy).toHaveBeenCalledTimes(0);
     expect(result).toEqual(data);
   });
 
@@ -311,8 +317,7 @@ describe('no available SearchConditions should return immediately', () => {
 
     const result = filterData(data, searchConditions, { caseSensitive: true });
 
-    // expect(currySpy).toHaveBeenCalledTimes(1);
-
+    expect(listCombinerSpy).toHaveBeenCalledTimes(1);
     expect(result).toEqual([
       {
         name: 'David Johnson',
