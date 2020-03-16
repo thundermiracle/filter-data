@@ -1,6 +1,6 @@
 {
   "name": "filter-data",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "simple, fast data filter",
   "keywords": [
     "match-sorter",
