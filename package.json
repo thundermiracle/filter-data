@@ -37,32 +37,29 @@
     "build:js:module": "tsc",
     "build:js:es": "tsc --project tsconfig.es.json",
     "build:js": "yarn build:js:module && yarn build:js:es",
-    "webpack:dev": "webpack --config webpack.dev.js",
-    "webpack:prod": "webpack --config webpack.prod.js",
-    "bundle": "yarn webpack:dev && yarn webpack:prod",
     "prebuild": "rimraf lib/ && rimraf dist/ && rimraf es/",
-    "build": "yarn build:js && yarn bundle"
+    "build": "yarn build:js"
   },
   "dependencies": {
-    "ramda": "0.26.1"
+    "ramda": "0.27.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/types": "^7.8.3",
-    "@types/jest": "^25.1.3",
+    "@babel/core": "^7.8.7",
+    "@babel/types": "^7.8.7",
+    "@types/jest": "^25.1.4",
     "@types/match-sorter": "^4.0.0",
-    "@types/node": "^13.7.6",
-    "@types/ramda": "^0.26.42",
-    "@typescript-eslint/eslint-plugin": "^2.21.0",
-    "@typescript-eslint/parser": "^2.21.0",
+    "@types/node": "^13.9.1",
+    "@types/ramda": "^0.26.44",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
     "codecov": "^3.6.5",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-react": "^1.1.7",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jest": "^23.8.0",
+    "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "fuse.js": "^3.4.6",
@@ -73,8 +70,6 @@
     "ts-jest": "^25.2.1",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
-    "typescript": "^3.8.2",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "typescript": "^3.8.3"
   }
 }
