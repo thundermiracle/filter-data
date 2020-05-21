@@ -1,6 +1,6 @@
 {
   "name": "filter-data",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "simple, fast data filter",
   "keywords": [
     "match-sorter",
@@ -15,7 +15,8 @@
   "main": "lib/index.js",
   "files": [
     "lib",
-    "es"
+    "es",
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -34,12 +35,12 @@
     "type-check:watch": "yarn type-check -- --watch",
     "test": "yarn type-check && yarn eslint && yarn jest && codecov",
     "bench": "ts-node ./benchmark/index.ts",
-    "build:js:module": "tsc",
+    "build:js:cjs": "tsc",
     "build:js:es": "tsc --project tsconfig.es.json",
-    "build:js": "yarn build:js:module && yarn build:js:es",
+    "build:js:umd": "rollup -c",
+    "build:js": "yarn build:js:cjs && yarn build:js:es && yarn build:js:umd",
     "prebuild": "rimraf lib/ && rimraf dist/ && rimraf es/",
-    "build": "yarn build:js",
-    "build:umd": "rollup -c"
+    "build": "yarn build:js"
   },
   "dependencies": {
     "ramda": "0.27.0"

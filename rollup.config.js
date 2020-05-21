@@ -9,7 +9,7 @@ export default [
     input: 'src/index.ts',
     output: {
       name: 'FilterData',
-      file: 'dist/bundle.min.js',
+      file: 'dist/filterdata.min.js',
       format: 'umd',
     },
     plugins: [resolve(), commonjs(), typescript(), terser()],

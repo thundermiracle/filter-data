@@ -47,6 +47,12 @@ Simple but fast data filter.
 | match partial, 1 key, slice(0,10) | 82.715ms | 91.082ms | <span style="color: green">0.393ms</span> |
 | input empty | <span style="color: green">0.007ms</span> | 4.665ms | 0.375ms |
 
+## Install From Browser
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/filter-data@0.1.3/dist/filterdata.min.js"></script>
+```
+
 ## Installation
 
 filter-data is available as an [npm package](https://www.npmjs.org/package/filter-data).
@@ -56,6 +62,19 @@ npm install --save filter-data
 ```
 
 ## Usage
+
+### From Browser
+
+import from FilterData object. And others are the same with [From npm](#from-npm)
+
+```js
+const { filterData, SearchType } = FilterData;
+.
+.
+.
+```
+
+### From npm
 
 1. search single key only.
 
