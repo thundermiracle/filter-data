@@ -11,7 +11,8 @@ Simple but fast data filter.
 
 ## Examples
 
-1. [Example In Browser](https://codesandbox.io/s/filter-data-example-stxj8?file=/index.html)
+1. [Example In Browser](https://codesandbox.io/s/filter-data-browser-stxj8?file=/index.html)
+1. [Example In React](https://codesandbox.io/s/filter-data-react-iw534?file=/src/getData.js)
 
 ## Benchmark
 
