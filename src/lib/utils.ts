@@ -6,6 +6,7 @@ import allPass from 'ramda/src/allPass';
 import anyPass from 'ramda/src/anyPass';
 import drop from 'ramda/src/drop';
 import take from 'ramda/src/take';
+import path from 'ramda/src/path';
 
 // use impure combiner to speed up
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -35,4 +36,5 @@ export {
   anyPass,
   drop,
   take,
+  path,
 };

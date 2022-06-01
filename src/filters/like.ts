@@ -1,4 +1,5 @@
-import { SearchCondition, DataObject } from '../lib/types';
+import { SearchCondition, DataObject, DataObjectValues } from '../lib/types';
+import { path } from '../lib/utils';
 
 /**
  * like check for data
@@ -13,7 +14,9 @@ const like = (
   data: DataObject,
 ): boolean => {
   const { key, value } = searchCondition;
-  const targetValue = data[key];
+  const targetValue =
+    (typeof key === 'string' ? data[key] : path<DataObjectValues>(key, data)) ||
+    '';
 
   // disable like search if targetValue is array
   if (Array.isArray(targetValue)) {
