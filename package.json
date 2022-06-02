@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/thundermiracle/filter-data#readme",
   "scripts": {
-    "eslint:src": "eslint src/**/*.{ts,tsx}",
-    "eslint:test": "eslint __test__/**/*.{ts,tsx}",
+    "eslint:src": "eslint src/**/*.ts",
+    "eslint:test": "eslint __test__/**/*.ts",
     "eslint": "yarn eslint:src && yarn eslint:test",
     "jest": "jest",
     "type-check": "tsc --noEmit --project tsconfig.eslint.json",
