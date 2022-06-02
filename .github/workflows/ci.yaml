@@ -34,7 +34,7 @@ jobs:
           key: ${{ matrix.os }}-node-v${{ matrix.node }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
       - name: install dependencies
-        run: yarn i
+        run: yarn install
 
       - name: test
         run: yarn test
