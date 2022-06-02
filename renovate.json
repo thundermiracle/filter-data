@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "config:base",
+    "schedule:monthly",
+    "group:allNonMajor",
+    "group:test",
+    "group:linters"
+  ],
+  "platformCommit": true,
+  "platformAutomerge": true,
+  "automerge": true,
+  "rebaseWhen": "conflicted",
+  "labels": [
+    "dependencies"
+  ],
+  "rangeStrategy": "bump",
+  "ignoreDeps": [
+    "node"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    }
+  ]
+}
