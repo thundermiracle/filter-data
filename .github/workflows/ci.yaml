@@ -1,0 +1,49 @@
+name: 'CI'
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: ['opened', 'edited', 'synchronize']
+
+jobs:
+  test:
+    name: 'Test in: ${{ matrix.os }}, node-${{ matrix.node }}'
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [12, 14, 16]
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: set up node.js v${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: "yarn"
+
+      - name: cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - name: install dependencies
+        run: yarn install
+
+      - name: test
+        run: yarn test
+
+      - name: build
+        run: yarn build
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          verbose: true
