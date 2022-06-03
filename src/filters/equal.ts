@@ -1,4 +1,5 @@
-import { SearchCondition, DataObject } from '../lib/types';
+import { SearchCondition, DataObject, DataObjectValues } from '../lib/types';
+import { path } from '../lib/utils';
 
 /**
  * equal check for data
@@ -12,7 +13,9 @@ const equal = (
   caseSensitive: boolean,
   data: DataObject,
 ): boolean => {
-  const targetValue = data[key];
+  const targetValue =
+    (typeof key === 'string' ? data[key] : path<DataObjectValues>(key, data)) ||
+    '';
 
   if (typeof targetValue === 'number') {
     return targetValue === Number(value);
