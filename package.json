@@ -43,7 +43,7 @@
     "build": "yarn build:js"
   },
   "dependencies": {
-    "ramda": "0.27.0"
+    "ramda": "0.28.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.1.0",
@@ -54,7 +54,7 @@
     "@types/jest": "^25.2.3",
     "@types/match-sorter": "^4.0.0",
     "@types/node": "^13.9.1",
-    "@types/ramda": "^0.26.44",
+    "@types/ramda": "^0.28.13",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",
@@ -66,13 +66,13 @@
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^3.4.1",
-    "fuse.js": "^3.4.6",
+    "fuse.js": "^3.6.1",
     "jest": "^25.5.4",
-    "match-sorter": "^4.0.2",
+    "match-sorter": "^4.2.1",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.10.5",
-    "rollup-plugin-terser": "^5.3.0",
-    "typescript": "^3.8.3"
+    "rollup": "^2.75.5",
+    "rollup-plugin-terser": "^5.3.1",
+    "typescript": "^3.9.10"
   }
 }
