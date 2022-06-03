@@ -9,7 +9,7 @@ import like from './like';
 import notEqual from './notEqual';
 import notLike from './notLike';
 
-export default {
+const filtersMap = {
   [SearchType.EQ]: equal,
   [SearchType.GT]: greater,
   [SearchType.GTE]: greaterOrEqual,
@@ -19,3 +19,5 @@ export default {
   [SearchType.NE]: notEqual,
   [SearchType.NLK]: notLike,
 };
+
+export default filtersMap;

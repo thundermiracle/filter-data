@@ -1,7 +1,8 @@
-import greater from './greater';
-import equal from './equal';
 import { complement, allPass } from '../lib/utils';
 import targetValueArray from '../prefilters/targetValueArray';
+
+import greater from './greater';
+import equal from './equal';
 
 /**
  * less check for data

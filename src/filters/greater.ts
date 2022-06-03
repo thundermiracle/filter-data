@@ -21,7 +21,7 @@ const greater = (
 
   // 数字の場合
   if (typeof targetValue === 'number') {
-    return targetValue > +value;
+    return targetValue > Number(value);
   }
 
   if (caseSensitive) {

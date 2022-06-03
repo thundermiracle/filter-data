@@ -7,18 +7,23 @@ import anyPass from 'ramda/src/anyPass';
 import drop from 'ramda/src/drop';
 import take from 'ramda/src/take';
 
+type AnyFunction = (...args: any[]) => any;
+
 // use impure combiner to speed up
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 function listCombiner(list: any[], val: any): any[] {
   list.push(val);
   return list;
 }
 
 // use self-made compose to avoid typescript error
-function compose(...fns: Function[]) {
+function compose(...fns: AnyFunction[]) {
   return (...args: any[]) =>
     fns.reduceRight((prevBC, fn) => {
-      if (!Array.isArray(prevBC)) prevBC = [prevBC];
+      if (!Array.isArray(prevBC)) {
+        // eslint-disable-next-line no-param-reassign
+        prevBC = [prevBC];
+      }
 
       return fn(...prevBC);
     }, args);
