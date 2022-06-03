@@ -7,6 +7,7 @@ import {
   anyPass,
   drop,
   take,
+  path,
 } from 'ramda';
 
 type AnyFunction = (...args: any[]) => any;
@@ -42,4 +43,5 @@ export {
   anyPass,
   drop,
   take,
+  path,
 };

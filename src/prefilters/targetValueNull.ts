@@ -1,9 +1,10 @@
-import { curry } from '../lib/utils';
+import { curry, path } from '../lib/utils';
 import {
-  SearchCondition,
-  DataObject,
   DataObjectWithNull,
   Predicator,
+  SearchCondition,
+  DataObject,
+  DataObjectWithNullValues,
 } from '../lib/types';
 
 /**
@@ -21,7 +22,10 @@ const targetValueIsNull = (
   data: DataObjectWithNull,
 ): boolean => {
   const { key } = searchCondition;
-  const targetValue = data[key];
+  const targetValue =
+    typeof key === 'string'
+      ? data[key]
+      : path<DataObjectWithNullValues>(key, data);
 
   // value is null or undefined
   if (targetValue == null) {

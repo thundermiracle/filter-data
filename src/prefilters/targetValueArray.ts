@@ -1,5 +1,5 @@
-import { curry } from '../lib/utils';
-import { SearchCondition, DataObject } from '../lib/types';
+import { curry, path } from '../lib/utils';
+import { SearchCondition, DataObject, DataObjectValues } from '../lib/types';
 
 type PredicatorWithOptions = (
   searchCondition: SearchCondition,
@@ -22,7 +22,9 @@ const excludeIfTargetValueIsArray = (
   data: DataObject,
 ): boolean => {
   const { key } = searchCondition;
-  const targetValue = data[key];
+  const targetValue =
+    (typeof key === 'string' ? data[key] : path<DataObjectValues>(key, data)) ||
+    '';
 
   if (Array.isArray(targetValue)) {
     return false;
