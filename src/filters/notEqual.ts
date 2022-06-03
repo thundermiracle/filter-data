@@ -1,5 +1,6 @@
-import equal from './equal';
 import { complement } from '../lib/utils';
+
+import equal from './equal';
 
 /**
  * not equal check for data

@@ -1,6 +1,7 @@
-import like from './like';
 import { complement } from '../lib/utils';
 import targetValueArray from '../prefilters/targetValueArray';
+
+import like from './like';
 
 /**
  * not like check for data

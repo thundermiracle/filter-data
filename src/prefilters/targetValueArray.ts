@@ -1,6 +1,12 @@
 import { curry } from '../lib/utils';
 import { SearchCondition, DataObject } from '../lib/types';
 
+type PredicatorWithOptions = (
+  searchCondition: SearchCondition,
+  caseSensitive: boolean,
+  data: DataObject,
+) => boolean;
+
 /**
  * exclude data if targetValue is an array
  *
@@ -10,7 +16,7 @@ import { SearchCondition, DataObject } from '../lib/types';
  * @param {*DataObject} data
  */
 const excludeIfTargetValueIsArray = (
-  predicator: Function,
+  predicator: PredicatorWithOptions,
   searchCondition: SearchCondition,
   caseSensitive: boolean,
   data: DataObject,

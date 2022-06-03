@@ -15,7 +15,7 @@ const equal = (
   const targetValue = data[key];
 
   if (typeof targetValue === 'number') {
-    return targetValue === +value;
+    return targetValue === Number(value);
   }
 
   if (Array.isArray(targetValue)) {

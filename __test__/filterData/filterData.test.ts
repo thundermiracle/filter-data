@@ -1,7 +1,7 @@
 import * as utils from '../../src/lib/utils';
-
 import filterData from '../../src/filterData';
 import SearchType from '../../src/lib/SearchType';
+
 import data from './data.json';
 
 const listCombinerSpy = jest.spyOn(utils, 'listCombiner');
