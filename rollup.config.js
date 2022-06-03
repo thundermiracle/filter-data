@@ -11,6 +11,7 @@ export default [
       name: 'FilterData',
       file: 'dist/filterdata.min.js',
       format: 'umd',
+      sourcemap: true,
     },
     plugins: [resolve(), commonjs(), typescript(), terser()],
   },
