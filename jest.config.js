@@ -3,7 +3,6 @@ module.exports = {
 
   collectCoverage: true,
 
-  transformIgnorePatterns: ['/node_modules/(?!ramda).+\\.js$', 'dist'],
   testPathIgnorePatterns: ['mocks'],
   testEnvironment: 'node',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],

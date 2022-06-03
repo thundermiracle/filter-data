@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
 import matchSorter from 'match-sorter';
 import Fuse from 'fuse.js';
+
 import { filterData, SearchType } from '../src';
 
 interface Dummy {
@@ -27,17 +29,21 @@ function bench(
 
   console.time(`[${prefixStr}]matchSorter`);
   let msResult = matchSorter(data, inputValue, { keys });
-  if (sliceCount) msResult = msResult.slice(0, sliceCount);
+  if (sliceCount) {
+    msResult = msResult.slice(0, sliceCount);
+  }
   console.timeEnd(`[${prefixStr}]matchSorter`);
 
   console.time(`[${prefixStr}]fuse.js`);
   const fuse = new Fuse(data, { keys });
   let fuseResult = fuse.search(inputValue);
-  if (sliceCount) fuseResult = fuseResult.slice(0, sliceCount);
+  if (sliceCount) {
+    fuseResult = fuseResult.slice(0, sliceCount);
+  }
   console.timeEnd(`[${prefixStr}]fuse.js`);
 
   console.time(`[${prefixStr}]filter-data`);
-  const searchConditions = keys.map(key => ({
+  const searchConditions = keys.map((key) => ({
     key,
     value: inputValue,
     type: SearchType.LK,
@@ -59,7 +65,7 @@ function benchArr(
   prefixStr: string,
   sliceCount?: number,
 ): void {
-  counts.forEach(count => {
+  counts.forEach((count) => {
     bench(count, inputValue, keys, `${prefixStr}--${count}`, sliceCount);
   });
   console.log('');
