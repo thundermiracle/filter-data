@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import matchSorter from 'match-sorter';
+import { matchSorter } from 'match-sorter';
 import Fuse from 'fuse.js';
 
 import { filterData, SearchType } from '../src';
