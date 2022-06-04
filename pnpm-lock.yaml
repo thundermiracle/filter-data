@@ -11,6 +11,7 @@ specifiers:
   '@types/node': ^17.0.39
   '@types/ramda': ^0.28.13
   '@web-configs/eslint-plugin': ^0.3.0
+  '@web-configs/prettier': ^0.1.1
   eslint: ^8.16.0
   fuse.js: ^6.6.2
   jest: ^28.1.0
@@ -38,6 +39,7 @@ devDependencies:
   '@types/node': 17.0.39
   '@types/ramda': 0.28.13
   '@web-configs/eslint-plugin': 0.3.0_o3zp54t777s3ewowhohd2wfnry
+  '@web-configs/prettier': 0.1.1
   eslint: 8.16.0
   fuse.js: 6.6.2
   jest: 28.1.0_@types+node@17.0.39
@@ -1497,6 +1499,10 @@ packages:
       - supports-color
       - typescript
       - utf-8-validate
+    dev: true
+
+  /@web-configs/prettier/0.1.1:
+    resolution: {integrity: sha512-joUfgKK0zxD1vf+hM3voGEFDTcgBLtVw8VDrK8NDp/+QxGaqBoh5LPSxZihawIgw/LflZ+27k84B7Aj/kzKmZg==}
     dev: true
 
   /abort-controller/3.0.0:
