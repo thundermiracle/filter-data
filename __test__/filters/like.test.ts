@@ -10,6 +10,20 @@ const searchDataArray = {
 };
 
 describe('test caseSensitive flag', () => {
+  test('return false if key is incorrect', () => {
+    const result = like(
+      {
+        key: 'notExist',
+        value: 'Ben',
+        type: SearchType.LK,
+      },
+      true,
+      searchDataString,
+    );
+
+    expect(result).toBe(false);
+  });
+
   test('caseSensitive=true(partial same, different alphabet case) -> false', () => {
     const result = like(
       {

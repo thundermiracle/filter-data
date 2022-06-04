@@ -13,7 +13,10 @@ const greater = (
   caseSensitive: boolean,
   data: DataObject,
 ): boolean => {
-  const targetValue = getObjValue(data, key) || '';
+  const targetValue = getObjValue(data, key);
+  if (targetValue == null) {
+    return false;
+  }
 
   // disable like search if targetValue is array
   if (Array.isArray(targetValue)) {

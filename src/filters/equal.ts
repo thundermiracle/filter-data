@@ -13,7 +13,10 @@ const equal = (
   caseSensitive: boolean,
   data: DataObject,
 ): boolean => {
-  const targetValue = getObjValue(data, key) || '';
+  const targetValue = getObjValue(data, key);
+  if (targetValue == null) {
+    return false;
+  }
 
   if (typeof targetValue === 'number') {
     return targetValue === Number(value);
