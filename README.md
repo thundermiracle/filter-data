@@ -20,7 +20,7 @@ Simple but fast data filter.
 
   _*The results are little different in partial search._
 
-|  | match-sorter (6.3.1) | fuse.js (6.6.2) | filter-data (0.1.3) |
+|  | match-sorter (6.3.1) | fuse.js (6.6.2) | filter-data (0.2.0) |
 | :--- | :--: | :-: | :--: |
 | match all, 1 key | 10.947ms | 4.244ms | <span style="color: green">1.827ms</span> |
 | no match, 1 key | <span style="color: green">0.523ms</span> | 2.385ms | 2.958ms |
@@ -37,7 +37,7 @@ Simple but fast data filter.
 
   _*The results are little different in partial search._
 
-|  | match-sorter (4.0.2) | fuse.js (3.4.6) | filter-data (0.1.1) |
+|  | match-sorter (4.0.2) | fuse.js (3.4.6) | filter-data (0.2.0) |
 | :--- | :--: | :-: | :--: |
 | match all, 1 key | 21.439ms | 49.336ms | <span style="color: green">16.884ms</span> |
 | no match, 1 key | 18.239ms | 33.312ms | <span style="color: green">6.382ms</span> |
@@ -53,7 +53,7 @@ Simple but fast data filter.
 ## Install From Browser
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/filter-data@0.1.3/dist/filterdata.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/filter-data@0.2.0/dist/filterdata.min.js"></script>
 ```
 
 ## Installation
@@ -176,6 +176,27 @@ const { filterData, SearchType } = FilterData;
       .
       .
       max 10 records
+    ] -->
+    ```
+
+1. search nested object.
+
+    ```js
+    import { filterData, SearchType } from 'filter-data';
+
+    // search firstName in father's sub object equals to 'dan'
+    const searchConditions = [
+      {
+        key: 'father.firstName', // or key: [['father', 'firstName']]
+        value: 'dan',
+        type: SearchType.EQ,
+      },
+    ];
+
+    const result = filterData(data, searchConditions);
+    // output:
+    <!-- [
+      { firstName: 'Jordan', age: 17, father: { firstName: 'dan', age: 50 } },
     ] -->
     ```
 
