@@ -1,10 +1,9 @@
-import { curry, getObjValue, path } from '../lib/utils';
+import { curry, getObjValue } from '../lib/utils';
 import {
   DataObjectWithNull,
   Predicator,
   SearchCondition,
   DataObject,
-  DataObjectWithNullValues,
 } from '../lib/types';
 
 /**

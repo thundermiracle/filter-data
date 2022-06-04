@@ -38,7 +38,10 @@ function getObjValue(
   data: DataObjectWithNull,
   key: string | string[],
 ): DataObjectValues | undefined {
-  return path<DataObjectValues>(typeof key === 'string' ? [key] : key, data);
+  return path<DataObjectValues>(
+    typeof key === 'string' ? key.split('.') : key,
+    data,
+  );
 }
 
 export {
@@ -52,6 +55,5 @@ export {
   anyPass,
   drop,
   take,
-  path,
   getObjValue,
 };

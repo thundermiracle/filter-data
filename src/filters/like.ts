@@ -14,7 +14,10 @@ const like = (
   data: DataObject,
 ): boolean => {
   const { key, value } = searchCondition;
-  const targetValue = getObjValue(data, key) || '';
+  const targetValue = getObjValue(data, key);
+  if (targetValue == null) {
+    return false;
+  }
 
   // disable like search if targetValue is array
   if (Array.isArray(targetValue)) {

@@ -21,18 +21,13 @@ export interface SearchConditionMultiple {
 
 export type DataObjectValues = string | number | (string | number)[];
 export interface DataObject {
-  [key: string]: DataObjectValues;
+  [key: string]: DataObjectValues | DataObject;
 }
 
-export type DataObjectWithNullValues =
-  | string
-  | number
-  | (string | number)[]
-  | undefined
-  | null;
+export type DataObjectWithNullValues = DataObjectValues | null;
 
 export interface DataObjectWithNull {
-  [key: string]: DataObjectWithNullValues;
+  [key: string]: DataObjectWithNullValues | DataObjectWithNull;
 }
 
 export type Predicator = (data: DataObject) => boolean;

@@ -14,6 +14,20 @@ const searchDataArray = {
 };
 
 describe('test caseSensitive flag', () => {
+  test('return false if key is incorrect', () => {
+    const result = greater(
+      {
+        key: 'notExist',
+        value: 'Ben',
+        type: SearchType.GT,
+      },
+      true,
+      searchDataString,
+    );
+
+    expect(result).toBe(false);
+  });
+
   test('caseSensitive=true(different alphabet case, compare to lowercase) -> false', () => {
     const result = greater(
       {
