@@ -10,6 +10,8 @@ import {
   path,
 } from 'ramda';
 
+import type { DataObjectValues, DataObjectWithNull } from './types';
+
 type AnyFunction = (...args: any[]) => any;
 
 // use impure combiner to speed up
@@ -32,6 +34,13 @@ function compose(...fns: AnyFunction[]) {
     }, args);
 }
 
+function getObjValue(
+  data: DataObjectWithNull,
+  key: string | string[],
+): DataObjectValues | undefined {
+  return path<DataObjectValues>(typeof key === 'string' ? [key] : key, data);
+}
+
 export {
   listCombiner,
   compose,
@@ -44,4 +53,5 @@ export {
   drop,
   take,
   path,
+  getObjValue,
 };

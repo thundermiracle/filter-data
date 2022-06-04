@@ -1,4 +1,4 @@
-import { curry, path } from '../lib/utils';
+import { curry, getObjValue, path } from '../lib/utils';
 import {
   DataObjectWithNull,
   Predicator,
@@ -17,15 +17,11 @@ import {
  */
 const targetValueIsNull = (
   includeNull: boolean,
-  searchCondition: SearchCondition,
+  { key }: SearchCondition,
   predicator: Predicator,
   data: DataObjectWithNull,
 ): boolean => {
-  const { key } = searchCondition;
-  const targetValue =
-    typeof key === 'string'
-      ? data[key]
-      : path<DataObjectWithNullValues>(key, data);
+  const targetValue = getObjValue(data, key);
 
   // value is null or undefined
   if (targetValue == null) {
