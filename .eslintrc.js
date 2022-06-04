@@ -6,4 +6,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.eslint.json',
   },
+  rules: {
+    'function-paren-newline': ['off'],
+  },
 };

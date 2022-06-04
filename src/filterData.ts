@@ -25,7 +25,10 @@ const optionsDefault: FilterDataOption = {
 function makeSinglePredicator(
   searchCondition: SearchCondition,
   options: FilterDataOption,
-  curriedFilter: Function,
+  curriedFilter: (
+    searchCondition: SearchCondition,
+    caseSensitive: boolean,
+  ) => Predicator,
 ): Predicator {
   const partialPredicator = curriedFilter(
     searchCondition,
@@ -63,7 +66,7 @@ function filterData<T>(
 
   const options = { ...optionsDefault, ...optionsIn };
 
-  const dataFilters = searchConditionsValNotEmpty.map(searchCondition => {
+  const dataFilters = searchConditionsValNotEmpty.map((searchCondition) => {
     const { key, type } = searchCondition;
 
     // get partial function
@@ -80,7 +83,7 @@ function filterData<T>(
     } else {
       // or search for multiple keys
       predicator = anyPass(
-        key.map(oneKey =>
+        key.map((oneKey) =>
           makeSinglePredicator(
             {
               key: oneKey,
