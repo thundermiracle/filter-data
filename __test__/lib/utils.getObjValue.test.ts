@@ -1,4 +1,5 @@
 import { getObjValue } from '../../src/lib/utils';
+
 import type { DataObjectWithNull } from '../../src/lib/types';
 
 const data: DataObjectWithNull = {

@@ -1,5 +1,6 @@
 import { curry, getObjValue } from '../lib/utils';
-import {
+
+import type {
   DataObjectWithNull,
   Predicator,
   SearchCondition,

@@ -1,5 +1,6 @@
-import { SearchCondition, DataObject } from '../lib/types';
 import { getObjValue } from '../lib/utils';
+
+import type { SearchCondition, DataObject } from '../lib/types';
 
 /**
  * equal check for data
