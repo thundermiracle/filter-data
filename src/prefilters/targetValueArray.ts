@@ -1,5 +1,6 @@
 import { curry, getObjValue } from '../lib/utils';
-import { SearchCondition, DataObject } from '../lib/types';
+
+import type { SearchCondition, DataObject } from '../lib/types';
 
 type PredicatorWithOptions = (
   searchCondition: SearchCondition,

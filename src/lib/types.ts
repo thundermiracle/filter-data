@@ -1,4 +1,4 @@
-import SearchType from './SearchType';
+import type SearchType from './SearchType';
 
 export interface FilterDataOption {
   caseSensitive?: boolean;

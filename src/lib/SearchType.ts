@@ -1,4 +1,3 @@
-/* eslint-disable @web-configs/typescript/prefer-pascal-case-enums */
 enum SearchType {
   EQ = 'equal',
   GT = 'greater',
