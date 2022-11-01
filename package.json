@@ -59,7 +59,7 @@
     "@types/ramda": "^0.28.15",
     "@web-configs/eslint-plugin": "^0.5.0",
     "@web-configs/prettier": "^0.1.2",
-    "eslint": "^8.16.0",
+    "eslint": "^8.26.0",
     "fuse.js": "^6.6.2",
     "jest": "^28.1.3",
     "match-sorter": "^6.3.1",
