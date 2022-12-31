@@ -50,7 +50,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.5.0",
+    "@rollup/plugin-typescript": "^10.0.1",
     "@swc/core": "^1.2.196",
     "@swc/jest": "^0.2.21",
     "@types/jest": "^29.2.1",
