@@ -1,7 +1,7 @@
 {
   "name": "filter-data",
   "version": "0.2.0",
-  "packageManager": "pnpm@7.26.2",
+  "packageManager": "pnpm@7.26.3",
   "description": "simple, fast data filter",
   "keywords": [
     "match-sorter",
