@@ -80,7 +80,7 @@ jobs:
               return;
             }
             const files = diffFiles
-              .filter((file) => file !== "package.json") // skip root package.json
+              // .filter((file) => file !== "package.json") // skip root package.json
               .filter((file) => file.includes("package.json"));
             const packageNames = await getPackagesNames(files);
             if (!packageNames.length) {
