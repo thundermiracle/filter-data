@@ -31,9 +31,9 @@ jobs:
         uses: changesets/action@v1
         with:
           commit: true
-          title: 'chore(release): {{nextRelease.version}}'
+          title: 'chore(release): release package'
           version: pnpm cs:version
           publish: pnpm cs:release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_GITHUB }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
