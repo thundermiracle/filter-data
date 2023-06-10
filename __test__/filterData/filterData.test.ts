@@ -4,6 +4,12 @@ import SearchType from '../../src/lib/SearchType';
 
 import data from './data.json';
 
+jest.mock('../../src/lib/utils', () => {
+  return {
+    __esModule: true,
+    ...jest.requireActual('../../src/lib/utils'),
+  };
+});
 const listCombinerSpy = jest.spyOn(utils, 'listCombiner');
 
 describe('includeNull', () => {
