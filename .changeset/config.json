@@ -1,6 +1,9 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
-  "changelog": "changelogithub",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "thundermiracle/filter-data" }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],
