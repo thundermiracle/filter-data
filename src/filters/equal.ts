@@ -1,6 +1,6 @@
 import { getObjValue } from '../lib/utils';
 
-import type { SearchCondition, DataObject } from '../lib/types';
+import type { FilterFunction } from '../lib/types';
 
 /**
  * equal check for data
@@ -9,11 +9,7 @@ import type { SearchCondition, DataObject } from '../lib/types';
  * @param {*boolean} caseSensitive: false
  * @param {*DataObject} data
  */
-const equal = (
-  { key, value }: SearchCondition,
-  caseSensitive: boolean,
-  data: DataObject,
-): boolean => {
+const equal: FilterFunction = ({ key, value }, caseSensitive, data) => {
   const targetValue = getObjValue(data, key);
   if (targetValue == null) {
     return false;
