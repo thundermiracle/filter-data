@@ -9,7 +9,9 @@ import like from './like';
 import notEqual from './notEqual';
 import notLike from './notLike';
 
-const filtersMap = {
+import type { FilterFunction } from '../lib/types';
+
+const filtersMap: Record<SearchType, FilterFunction> = {
   [SearchType.EQ]: equal,
   [SearchType.GT]: greater,
   [SearchType.GTE]: greaterOrEqual,

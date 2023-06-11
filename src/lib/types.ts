@@ -31,3 +31,9 @@ export interface DataObjectWithNull {
 }
 
 export type Predicator = (data: DataObject) => boolean;
+
+export type FilterFunction = (
+  conditions: SearchCondition,
+  caseSensitive: boolean,
+  data: DataObject,
+) => boolean;

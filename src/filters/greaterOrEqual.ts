@@ -10,6 +10,6 @@ import less from './less';
  * @param {*boolean} caseSensitive: false
  * @param {*DataObject} data
  */
-const greaterOrEqual = targetValueArray(complement(less as any));
+const greaterOrEqual = targetValueArray(complement(less));
 
 export default greaterOrEqual;
