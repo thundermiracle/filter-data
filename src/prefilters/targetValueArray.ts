@@ -1,5 +1,6 @@
 import { curry, getObjValue } from '../lib/utils';
 
+import type { F } from 'ts-toolbelt';
 import type { SearchCondition, DataObject } from '../lib/types';
 
 type PredicatorWithOptions = (
@@ -32,4 +33,8 @@ const excludeIfTargetValueIsArray = (
   return predicator(searchCondition, caseSensitive, data);
 };
 
-export default curry(excludeIfTargetValueIsArray);
+const targetValueArray: F.Curry<typeof excludeIfTargetValueIsArray> = curry(
+  excludeIfTargetValueIsArray,
+);
+
+export default targetValueArray;
