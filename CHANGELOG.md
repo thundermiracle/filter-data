@@ -1,5 +1,11 @@
 # filter-data
 
+## 0.3.1
+
+### Patch Changes
+
+- [#93](https://github.com/thundermiracle/filter-data/pull/93) [`1d6e49f`](https://github.com/thundermiracle/filter-data/commit/1d6e49f699937f3a01f04761dfb46c535b3fb8b2) Thanks [@thundermiracle](https://github.com/thundermiracle)! - fix EUNSCOPED Can't restrict access to unscoped packages problem when publishing
+
 ## 0.3.0
 
 ### Minor Changes
