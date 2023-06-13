@@ -13,10 +13,22 @@
   ],
   "author": "ThunderMiracle",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/es/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./umd/index.umd.js",
+  "jsdelivr": "./umd/index.umd.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/es/index.js",
+      "import": "./dist/es/index.js",
+      "require": "./dist/cjs/index.cjs",
+      "default": "./dist/es/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
-    "lib",
-    "es",
     "dist"
   ],
   "repository": {
@@ -39,7 +51,7 @@
     "build:js:cjs": "tsc --project tsconfig.cjs.json",
     "build:js:es": "tsc --project tsconfig.es.json",
     "build:js:umd": "rollup -c",
-    "build:js": "pnpm build:js:cjs && pnpm build:js:es && pnpm build:js:umd",
+    "build:js": "rollup -c",
     "prettier": "prettier --write 'src/**/*.ts' '__test__/**/*.ts'",
     "prebuild": "rimraf lib/ && rimraf dist/ && rimraf es/",
     "build": "pnpm build:js",
@@ -47,7 +59,7 @@
     "cs:release": "pnpm build && changeset publish"
   },
   "dependencies": {
-    "ramda": "0.29.0"
+    "ramda": "^0.29.0"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
@@ -71,6 +83,7 @@
     "prettier": "^2.8.8",
     "rimraf": "^5.0.1",
     "rollup": "^3.24.1",
+    "rollup-plugin-dts": "^5.3.0",
     "ts-toolbelt": "^9.6.0",
     "tslib": "^2.5.3",
     "tsx": "^3.12.7",

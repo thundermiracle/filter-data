@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   ramda:
-    specifier: 0.29.0
+    specifier: ^0.29.0
     version: 0.29.0
 
 devDependencies:
@@ -73,6 +73,9 @@ devDependencies:
   rollup:
     specifier: ^3.24.1
     version: 3.24.1
+  rollup-plugin-dts:
+    specifier: ^5.3.0
+    version: 5.3.0(rollup@3.24.1)(typescript@5.1.3)
   ts-toolbelt:
     specifier: ^9.6.0
     version: 9.6.0
@@ -103,13 +106,6 @@ packages:
       node-fetch: 2.6.7
     transitivePeerDependencies:
       - encoding
-    dev: true
-
-  /@babel/code-frame@7.18.6:
-    resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/highlight': 7.22.5
     dev: true
 
   /@babel/code-frame@7.22.5:
@@ -785,7 +781,7 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
-      '@babel/code-frame': 7.18.6
+      '@babel/code-frame': 7.22.5
       '@graphql-tools/code-file-loader': 7.3.8(graphql@15.8.0)
       '@graphql-tools/graphql-tag-pluck': 7.3.8(graphql@15.8.0)
       '@graphql-tools/utils': 9.2.1(graphql@15.8.0)
@@ -4555,7 +4551,7 @@ packages:
     resolution: {integrity: sha512-Dx5nEjw9V8C1/Yj10S/8ivA8F439VS8vTq1L7hEgwHFn9ovSKNpYW/kwNh7UglaEgXO42XxzKJB+2x0nSglFVw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@babel/code-frame': 7.18.6
+      '@babel/code-frame': 7.22.5
       '@jest/types': 29.2.1
       '@types/stack-utils': 2.0.1
       chalk: 4.1.2
@@ -4983,6 +4979,13 @@ packages:
 
   /magic-string@0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /magic-string@0.30.0:
+    resolution: {integrity: sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==}
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.14
@@ -5684,6 +5687,20 @@ packages:
     hasBin: true
     dependencies:
       glob: 10.2.7
+    dev: true
+
+  /rollup-plugin-dts@5.3.0(rollup@3.24.1)(typescript@5.1.3):
+    resolution: {integrity: sha512-8FXp0ZkyZj1iU5klkIJYLjIq/YZSwBoERu33QBDxm/1yw5UU4txrEtcmMkrq+ZiKu3Q4qvPCNqc3ovX6rjqzbQ==}
+    engines: {node: '>=v14'}
+    peerDependencies:
+      rollup: ^3.0.0
+      typescript: ^4.1 || ^5.0
+    dependencies:
+      magic-string: 0.30.0
+      rollup: 3.24.1
+      typescript: 5.1.3
+    optionalDependencies:
+      '@babel/code-frame': 7.22.5
     dev: true
 
   /rollup@3.24.1:
