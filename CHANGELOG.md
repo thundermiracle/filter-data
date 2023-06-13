@@ -1,5 +1,11 @@
 # filter-data
 
+## 0.4.0
+
+### Minor Changes
+
+- [#95](https://github.com/thundermiracle/filter-data/pull/95) [`ee6a3bc`](https://github.com/thundermiracle/filter-data/commit/ee6a3bc5e1be2e1c83abf66a73f10366271e14f7) Thanks [@thundermiracle](https://github.com/thundermiracle)! - re-arrange rollup publish settings
+
 ## 0.3.1
 
 ### Patch Changes
