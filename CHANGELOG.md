@@ -1,5 +1,30 @@
 # filter-data
 
+## 0.4.1
+
+### Patch Changes
+
+- [#102](https://github.com/thundermiracle/filter-data/pull/102) [`e4b72c3`](https://github.com/thundermiracle/filter-data/commit/e4b72c3e129f60d154c8ac23f8d3eecdeccea093) Thanks [@thundermiracle](https://github.com/thundermiracle)! - fix: pkg publish for browser
+
+- [#100](https://github.com/thundermiracle/filter-data/pull/100) [`dd1b45b`](https://github.com/thundermiracle/filter-data/commit/dd1b45baae2b0f9ae34742a13fa2e700ffdca62e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `^18.16.19`.
+
+- [#101](https://github.com/thundermiracle/filter-data/pull/101) [`a9a5f1d`](https://github.com/thundermiracle/filter-data/commit/a9a5f1df6462e74857c7edb89b0527b6d8179401) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint` to `^8.44.0`.
+
+- [#98](https://github.com/thundermiracle/filter-data/pull/98) [`f217bcd`](https://github.com/thundermiracle/filter-data/commit/f217bcd2d79a11e65596e8316f2387f6f136911e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `^1.3.67`.
+  Updated dependency `@swc/jest` to `^0.2.26`.
+  Updated dependency `@types/jest` to `^29.5.2`.
+  Updated dependency `jest` to `^29.5.0`.
+
+- [#97](https://github.com/thundermiracle/filter-data/pull/97) [`2a2ed94`](https://github.com/thundermiracle/filter-data/commit/2a2ed94da3046a23d5974e546fc89c48acf5d43f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.6.5`.
+  Updated dependency `@changesets/cli` to `^2.26.2`.
+  Updated dependency `@rollup/plugin-commonjs` to `^25.0.2`.
+  Updated dependency `@rollup/plugin-typescript` to `^11.1.2`.
+  Updated dependency `@types/node` to `^18.16.18`.
+  Updated dependency `@types/ramda` to `^0.29.3`.
+  Updated dependency `rollup` to `^3.26.0`.
+  Updated dependency `tslib` to `^2.6.0`.
+  Updated dependency `typescript` to `^5.1.6`.
+
 ## 0.4.0
 
 ### Minor Changes
