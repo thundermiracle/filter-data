@@ -16,8 +16,8 @@
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/es/index.js",
   "types": "./dist/index.d.ts",
-  "unpkg": "./umd/index.umd.js",
-  "jsdelivr": "./umd/index.umd.js",
+  "unpkg": "./umd/filterdata.umd.js",
+  "jsdelivr": "./umd/filterdata.umd.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -29,7 +29,8 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "dist"
+    "dist",
+    "umd"
   ],
   "repository": {
     "type": "git",
@@ -48,13 +49,9 @@
     "type-check:watch": "pnpm type-check -- --watch",
     "test": "pnpm type-check && pnpm eslint && pnpm jest",
     "bench": "tsx ./benchmark/index.ts",
-    "build:js:cjs": "tsc --project tsconfig.cjs.json",
-    "build:js:es": "tsc --project tsconfig.es.json",
-    "build:js:umd": "rollup -c",
-    "build:js": "rollup -c",
     "prettier": "prettier --write 'src/**/*.ts' '__test__/**/*.ts'",
     "prebuild": "rimraf lib/ && rimraf dist/ && rimraf es/",
-    "build": "pnpm build:js",
+    "build": "rollup -c",
     "cs:version": "changeset version",
     "cs:release": "pnpm build && changeset publish"
   },
