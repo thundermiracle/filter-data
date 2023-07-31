@@ -77,7 +77,7 @@
     "fuse.js": "^6.6.2",
     "jest": "^29.6.2",
     "match-sorter": "^6.3.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "rimraf": "^5.0.1",
     "rollup": "^3.27.0",
     "rollup-plugin-dts": "^5.3.1",
