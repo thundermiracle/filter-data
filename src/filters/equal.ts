@@ -21,7 +21,7 @@ const equal: FilterFunction = ({ key, value }, caseSensitive, data) => {
 
   if (Array.isArray(targetValue)) {
     if (caseSensitive) {
-      return targetValue.map((x) => x.toString()).includes(value.toString());
+      return targetValue.includes(value.toString());
     }
 
     return targetValue
