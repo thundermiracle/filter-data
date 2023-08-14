@@ -1,5 +1,11 @@
 # filter-data
 
+## 0.5.1
+
+### Patch Changes
+
+- [#114](https://github.com/thundermiracle/filter-data/pull/114) [`8378069`](https://github.com/thundermiracle/filter-data/commit/8378069c3f794614c298e05a2f01cc2796b93473) Thanks [@thundermiracle](https://github.com/thundermiracle)! - fix: opposite date comparison
+
 ## 0.5.0
 
 ### Minor Changes
