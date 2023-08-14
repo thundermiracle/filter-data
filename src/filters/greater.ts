@@ -1,4 +1,4 @@
-import { getObjValue } from '../lib/utils';
+import { getObjValue, timeDiff } from '../lib/utils';
 
 import type { FilterFunction } from '../lib/types';
 
@@ -23,6 +23,11 @@ const greater: FilterFunction = ({ key, value }, caseSensitive, data) => {
   // 数字の場合
   if (typeof targetValue === 'number') {
     return targetValue > Number(value);
+  }
+
+  // value is date
+  if (value instanceof Date) {
+    return timeDiff(value, targetValue) > 0;
   }
 
   if (caseSensitive) {

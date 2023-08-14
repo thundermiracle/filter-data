@@ -9,13 +9,13 @@ export interface FilterDataOption {
 
 export interface SearchCondition {
   key: string | string[];
-  value: string | number | boolean;
+  value: string | number | boolean | Date;
   type: SearchType;
 }
 
 export interface SearchConditionMultiple {
   key: string | string[] | string[][];
-  value?: string | number | boolean;
+  value?: string | number | boolean | Date;
   type: SearchType;
 }
 
