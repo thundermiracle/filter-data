@@ -8,14 +8,15 @@ import {
   drop,
   take,
 } from './lib/utils';
-import {
+import filtersMap from './filters';
+import targetValueNull from './prefilters/targetValueNull';
+
+import type {
   SearchCondition,
   FilterDataOption,
   SearchConditionMultiple,
   Predicator,
 } from './lib/types';
-import filtersMap from './filters';
-import targetValueNull from './prefilters/targetValueNull';
 
 const optionsDefault: FilterDataOption = {
   caseSensitive: false,
