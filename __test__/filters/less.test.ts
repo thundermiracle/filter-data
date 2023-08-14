@@ -13,6 +13,10 @@ const searchDataArray = {
   fullName: ['Ben', 'Jackson'],
 };
 
+const searchDataDate = {
+  birthday: '2012-03-24',
+};
+
 describe('test caseSensitive flag', () => {
   test('caseSensitive=true(different alphabet case, compare to lowercase) -> true', () => {
     const result = less(
@@ -140,5 +144,47 @@ describe('test searchCondition', () => {
     );
 
     expect(result).toBe(false);
+  });
+
+  test('target value is Date string same -> false', () => {
+    const result = less(
+      {
+        key: 'birthday',
+        value: new Date('2012-03-24'),
+        type: SearchType.GT,
+      },
+      false,
+      searchDataDate,
+    );
+
+    expect(result).toBe(false);
+  });
+
+  test('target value is Date string -> false', () => {
+    const result = less(
+      {
+        key: 'birthday',
+        value: new Date('2015-05-15'),
+        type: SearchType.GT,
+      },
+      false,
+      searchDataDate,
+    );
+
+    expect(result).toBe(false);
+  });
+
+  test('target value is Date string -> true', () => {
+    const result = less(
+      {
+        key: 'birthday',
+        value: new Date('2011-05-15'),
+        type: SearchType.GT,
+      },
+      false,
+      searchDataDate,
+    );
+
+    expect(result).toBe(true);
   });
 });
