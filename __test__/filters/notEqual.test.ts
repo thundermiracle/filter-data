@@ -209,7 +209,7 @@ describe('test searchCondition', () => {
       {
         key: 'married',
         value: true,
-        type: SearchType.EQ,
+        type: SearchType.NE,
       },
       false,
       searchDataBoolean,
@@ -223,7 +223,7 @@ describe('test searchCondition', () => {
       {
         key: 'married',
         value: true,
-        type: SearchType.EQ,
+        type: SearchType.NE,
       },
       false,
       searchDataArrayBoolean,
@@ -237,7 +237,7 @@ describe('test searchCondition', () => {
       {
         key: 'married',
         value: false,
-        type: SearchType.EQ,
+        type: SearchType.NE,
       },
       false,
       searchDataBoolean,
@@ -251,7 +251,7 @@ describe('test searchCondition', () => {
       {
         key: 'married',
         value: false,
-        type: SearchType.EQ,
+        type: SearchType.NE,
       },
       false,
       searchDataArrayBoolean,
@@ -265,7 +265,7 @@ describe('test searchCondition', () => {
       {
         key: 'registered',
         value: new Date('2023-08-14T10:00:00.000Z'),
-        type: SearchType.EQ,
+        type: SearchType.NE,
       },
       false,
       searchDataDate,
@@ -279,7 +279,7 @@ describe('test searchCondition', () => {
       {
         key: 'registered',
         value: new Date('2023-08-15T21:00:00.000Z'),
-        type: SearchType.EQ,
+        type: SearchType.NE,
       },
       false,
       searchDataArrayDate,
@@ -293,7 +293,7 @@ describe('test searchCondition', () => {
       {
         key: 'registered',
         value: new Date('2023-08-14T09:00:00.000Z'),
-        type: SearchType.EQ,
+        type: SearchType.NE,
       },
       false,
       searchDataDate,
@@ -307,7 +307,7 @@ describe('test searchCondition', () => {
       {
         key: 'registered',
         value: new Date('2023-08-15T10:00:00.000Z'),
-        type: SearchType.EQ,
+        type: SearchType.NE,
       },
       false,
       searchDataArrayDate,

@@ -27,7 +27,7 @@ const greater: FilterFunction = ({ key, value }, caseSensitive, data) => {
 
   // value is date
   if (value instanceof Date) {
-    return timeDiff(value, targetValue) > 0;
+    return timeDiff(value, targetValue) < 0;
   }
 
   if (caseSensitive) {
