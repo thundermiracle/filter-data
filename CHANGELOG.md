@@ -1,5 +1,37 @@
 # filter-data
 
+## 0.5.0
+
+### Minor Changes
+
+- [#113](https://github.com/thundermiracle/filter-data/pull/113) [`4c804d5`](https://github.com/thundermiracle/filter-data/commit/4c804d5640dcd02202225fe98c2a0c5f90f02a83) Thanks [@thundermiracle](https://github.com/thundermiracle)! - feat: support date compare
+
+- [#110](https://github.com/thundermiracle/filter-data/pull/110) [`719e5ad`](https://github.com/thundermiracle/filter-data/commit/719e5ad06c0b89d486f2a1bc65857ebf5648d070) Thanks [@thundermiracle](https://github.com/thundermiracle)! - feat: support boolean search
+
+### Patch Changes
+
+- [#111](https://github.com/thundermiracle/filter-data/pull/111) [`2080b04`](https://github.com/thundermiracle/filter-data/commit/2080b04e4081ade126f72f5298287adc48390638) Thanks [@thundermiracle](https://github.com/thundermiracle)! - fix: eslint
+
+- [#106](https://github.com/thundermiracle/filter-data/pull/106) [`f438a82`](https://github.com/thundermiracle/filter-data/commit/f438a82b32e2da62f195d3179b2acf53e107f049) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint` to `^8.46.0`.
+
+- [#107](https://github.com/thundermiracle/filter-data/pull/107) [`fefa569`](https://github.com/thundermiracle/filter-data/commit/fefa569b00c3cc2b9a8c0a204b191cd60893ea5e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier` to `^3.0.0`.
+
+- [#104](https://github.com/thundermiracle/filter-data/pull/104) [`b1d7b2c`](https://github.com/thundermiracle/filter-data/commit/b1d7b2c1e299e6093180c3a269d085d6ab503b55) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `^1.3.72`.
+  Updated dependency `@swc/jest` to `^0.2.27`.
+  Updated dependency `@types/jest` to `^29.5.3`.
+  Updated dependency `jest` to `^29.6.2`.
+
+- [#103](https://github.com/thundermiracle/filter-data/pull/103) [`6dacb42`](https://github.com/thundermiracle/filter-data/commit/6dacb4208ad3102b69223f416ac24da0c4aa4add) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.6.11`.
+  Updated dependency `@rollup/plugin-commonjs` to `^25.0.3`.
+  Updated dependency `@types/node` to `^18.17.1`.
+  Updated dependency `rollup` to `^3.27.0`.
+  Updated dependency `rollup-plugin-dts` to `^5.3.1`.
+  Updated dependency `tslib` to `^2.6.1`.
+
+- [#108](https://github.com/thundermiracle/filter-data/pull/108) [`0d01fbb`](https://github.com/thundermiracle/filter-data/commit/0d01fbbb8f88ee626412207989dfb43b9a5f661d) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `^1.3.73`.
+
+- [#112](https://github.com/thundermiracle/filter-data/pull/112) [`85229be`](https://github.com/thundermiracle/filter-data/commit/85229be0ec5dc562024e8c8d541f55c62a9ce2a4) Thanks [@thundermiracle](https://github.com/thundermiracle)! - fix: type of SearchConditionMultiple
+
 ## 0.4.1
 
 ### Patch Changes
