@@ -15,7 +15,7 @@ export interface SearchCondition {
 
 export interface SearchConditionMultiple {
   key: string | string[] | string[][];
-  value?: string | number;
+  value?: string | number | boolean;
   type: SearchType;
 }
 
