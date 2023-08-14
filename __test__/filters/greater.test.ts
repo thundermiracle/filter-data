@@ -178,7 +178,7 @@ describe('test searchCondition', () => {
     const result = greater(
       {
         key: 'birthday',
-        value: new Date('2015-05-15'),
+        value: new Date('2011-05-15'),
         type: SearchType.GT,
       },
       false,
@@ -192,7 +192,7 @@ describe('test searchCondition', () => {
     const result = greater(
       {
         key: 'birthday',
-        value: new Date('2011-05-15'),
+        value: new Date('2015-05-15'),
         type: SearchType.GT,
       },
       false,

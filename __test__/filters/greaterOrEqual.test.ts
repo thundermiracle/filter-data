@@ -165,7 +165,7 @@ describe('test searchCondition', () => {
       {
         key: 'birthday',
         value: new Date('2012-03-24'),
-        type: SearchType.GT,
+        type: SearchType.GTE,
       },
       false,
       searchDataDate,
@@ -178,8 +178,8 @@ describe('test searchCondition', () => {
     const result = greaterOrEqual(
       {
         key: 'birthday',
-        value: new Date('2015-05-15'),
-        type: SearchType.GT,
+        value: new Date('2011-05-15'),
+        type: SearchType.GTE,
       },
       false,
       searchDataDate,
@@ -192,8 +192,8 @@ describe('test searchCondition', () => {
     const result = greaterOrEqual(
       {
         key: 'birthday',
-        value: new Date('2011-05-15'),
-        type: SearchType.GT,
+        value: new Date('2015-05-15'),
+        type: SearchType.GTE,
       },
       false,
       searchDataDate,

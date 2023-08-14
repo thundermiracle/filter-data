@@ -23,7 +23,7 @@ describe('test caseSensitive flag', () => {
       {
         key: 'fullName',
         value: 'abcdEfg',
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       true,
       searchDataString,
@@ -37,7 +37,7 @@ describe('test caseSensitive flag', () => {
       {
         key: 'fullName',
         value: 'ABcdEfg',
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       true,
       searchDataString,
@@ -67,7 +67,7 @@ describe('test searchCondition', () => {
       {
         key: 'fullName',
         value: 'ABcdEfg',
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       false,
       searchDataString,
@@ -81,7 +81,7 @@ describe('test searchCondition', () => {
       {
         key: 'fullName',
         value: 'ACcdEfg',
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       false,
       searchDataString,
@@ -95,7 +95,7 @@ describe('test searchCondition', () => {
       {
         key: 'fullName',
         value: 'Abcdeff',
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       false,
       searchDataString,
@@ -109,7 +109,7 @@ describe('test searchCondition', () => {
       {
         key: 'fullName',
         value: 'AbcdCfg',
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       false,
       searchDataArray,
@@ -123,7 +123,7 @@ describe('test searchCondition', () => {
       {
         key: 'fullName',
         value: 34223,
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       false,
       searchDataNumber,
@@ -137,7 +137,7 @@ describe('test searchCondition', () => {
       {
         key: 'fullName',
         value: 34023,
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       false,
       searchDataNumber,
@@ -151,7 +151,7 @@ describe('test searchCondition', () => {
       {
         key: 'fullName',
         value: 34123,
-        type: SearchType.LT,
+        type: SearchType.LTE,
       },
       false,
       searchDataNumber,
@@ -165,7 +165,7 @@ describe('test searchCondition', () => {
       {
         key: 'birthday',
         value: new Date('2012-03-24'),
-        type: SearchType.GT,
+        type: SearchType.LTE,
       },
       false,
       searchDataDate,
@@ -178,8 +178,8 @@ describe('test searchCondition', () => {
     const result = lessOrEqual(
       {
         key: 'birthday',
-        value: new Date('2015-05-15'),
-        type: SearchType.GT,
+        value: new Date('2011-05-15'),
+        type: SearchType.LTE,
       },
       false,
       searchDataDate,
@@ -192,8 +192,8 @@ describe('test searchCondition', () => {
     const result = lessOrEqual(
       {
         key: 'birthday',
-        value: new Date('2011-05-15'),
-        type: SearchType.GT,
+        value: new Date('2015-05-15'),
+        type: SearchType.LTE,
       },
       false,
       searchDataDate,
