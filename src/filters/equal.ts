@@ -21,11 +21,11 @@ const equal: FilterFunction = ({ key, value }, caseSensitive, data) => {
 
   if (Array.isArray(targetValue)) {
     if (caseSensitive) {
-      return targetValue.includes(value);
+      return targetValue.includes(value.toString());
     }
 
     return targetValue
-      .map((x: string | number) => x.toString().toUpperCase())
+      .map((x) => x.toString().toUpperCase())
       .includes(value.toString().toUpperCase());
   }
 
@@ -33,7 +33,7 @@ const equal: FilterFunction = ({ key, value }, caseSensitive, data) => {
     return targetValue === value.toString();
   }
 
-  return targetValue.toUpperCase() === value.toString().toUpperCase();
+  return targetValue.toString().toUpperCase() === value.toString().toUpperCase();
 };
 
 export default equal;

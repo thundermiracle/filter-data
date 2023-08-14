@@ -17,6 +17,14 @@ const searchDataArray = {
   fullName: ['Ben', 'Jackson'],
 };
 
+const searchDataBoolean = {
+  married: true,
+};
+
+const searchDataArrayBoolean = {
+  married: [true, true],
+};
+
 describe('test caseSensitive flag', () => {
   test('return false if key is incorrect', () => {
     const result = equal(
@@ -146,7 +154,7 @@ describe('test searchCondition', () => {
     expect(result).toBe(true);
   });
 
-  test('targetvalue is array, different alphabet case -> true', () => {
+  test('target value is array, different alphabet case -> true', () => {
     const result = equal(
       {
         key: 'fullName',
@@ -228,5 +236,61 @@ describe('test searchCondition', () => {
     );
 
     expect(result).toBe(true);
+  });
+
+  test('target value is boolean string and search value is boolean -> true', () => {
+    const result = equal(
+      {
+        key: 'married',
+        value: true,
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataBoolean,
+    );
+
+    expect(result).toBe(true);
+  });
+
+  test('target value is array of boolean string and search value is boolean -> true', () => {
+    const result = equal(
+      {
+        key: 'married',
+        value: true,
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataArrayBoolean,
+    );
+
+    expect(result).toBe(true);
+  });
+
+  test('target value is boolean string and search value is boolean -> false', () => {
+    const result = equal(
+      {
+        key: 'married',
+        value: false,
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataBoolean,
+    );
+
+    expect(result).toBe(false);
+  });
+
+  test('target value is array of boolean string and search value is boolean -> false', () => {
+    const result = equal(
+      {
+        key: 'married',
+        value: false,
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataArrayBoolean,
+    );
+
+    expect(result).toBe(false);
   });
 });
