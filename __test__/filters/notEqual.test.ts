@@ -17,6 +17,14 @@ const searchDataArray = {
   fullName: ['Ben', 'Jackson'],
 };
 
+const searchDataBoolean = {
+  married: true,
+};
+
+const searchDataArrayBoolean = {
+  married: [true, true],
+};
+
 describe('test caseSensitive flag', () => {
   test('caseSensitive=true(same string, different alphabet case) -> true', () => {
     const result = notEqual(
@@ -186,5 +194,61 @@ describe('test searchCondition', () => {
     );
 
     expect(result).toBe(false);
+  });
+
+  test('target value is boolean string and search value is boolean -> true', () => {
+    const result = notEqual(
+      {
+        key: 'married',
+        value: true,
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataBoolean,
+    );
+
+    expect(result).toBe(false);
+  });
+
+  test('target value is array of boolean string and search value is boolean -> true', () => {
+    const result = notEqual(
+      {
+        key: 'married',
+        value: true,
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataArrayBoolean,
+    );
+
+    expect(result).toBe(false);
+  });
+
+  test('target value is boolean string and search value is boolean -> false', () => {
+    const result = notEqual(
+      {
+        key: 'married',
+        value: false,
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataBoolean,
+    );
+
+    expect(result).toBe(true);
+  });
+
+  test('target value is array of boolean string and search value is boolean -> false', () => {
+    const result = notEqual(
+      {
+        key: 'married',
+        value: false,
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataArrayBoolean,
+    );
+
+    expect(result).toBe(true);
   });
 });

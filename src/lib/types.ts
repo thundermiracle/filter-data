@@ -9,7 +9,7 @@ export interface FilterDataOption {
 
 export interface SearchCondition {
   key: string | string[];
-  value: string | number;
+  value: string | number | boolean;
   type: SearchType;
 }
 
@@ -19,7 +19,7 @@ export interface SearchConditionMultiple {
   type: SearchType;
 }
 
-export type DataObjectValues = string | number | (string | number)[];
+export type DataObjectValues = string | number | boolean | (string | number | boolean)[];
 export interface DataObject {
   [key: string]: DataObjectValues | DataObject;
 }

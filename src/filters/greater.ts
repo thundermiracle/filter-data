@@ -29,7 +29,7 @@ const greater: FilterFunction = ({ key, value }, caseSensitive, data) => {
     return targetValue > value;
   }
 
-  return targetValue.toUpperCase() > value.toString().toUpperCase();
+  return targetValue.toString().toUpperCase() > value.toString().toUpperCase();
 };
 
 export default greater;
