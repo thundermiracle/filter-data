@@ -25,6 +25,14 @@ const searchDataArrayBoolean = {
   married: [true, true],
 };
 
+const searchDataDate = {
+  registered: '2023-08-14T10:00:00.000Z',
+};
+
+const searchDataArrayDate = {
+  registered: ['2023-08-14T10:00:00.000Z', '2023-08-15T21:00:00.000Z'],
+};
+
 describe('test caseSensitive flag', () => {
   test('return false if key is incorrect', () => {
     const result = equal(
@@ -289,6 +297,62 @@ describe('test searchCondition', () => {
       },
       false,
       searchDataArrayBoolean,
+    );
+
+    expect(result).toBe(false);
+  });
+
+  test('target value is date string and search value is Date(same)', () => {
+    const result = equal(
+      {
+        key: 'registered',
+        value: new Date('2023-08-14T10:00:00.000Z'),
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataDate,
+    );
+
+    expect(result).toBe(true);
+  });
+
+  test('target value is date string and search value is Date array(same)', () => {
+    const result = equal(
+      {
+        key: 'registered',
+        value: new Date('2023-08-15T21:00:00.000Z'),
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataArrayDate,
+    );
+
+    expect(result).toBe(true);
+  });
+
+  test('target value is date string and search value is Date(different)', () => {
+    const result = equal(
+      {
+        key: 'registered',
+        value: new Date('2023-08-14T09:00:00.000Z'),
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataDate,
+    );
+
+    expect(result).toBe(false);
+  });
+
+  test('target value is date string and search value is Date array(different)', () => {
+    const result = equal(
+      {
+        key: 'registered',
+        value: new Date('2023-08-15T10:00:00.000Z'),
+        type: SearchType.EQ,
+      },
+      false,
+      searchDataArrayDate,
     );
 
     expect(result).toBe(false);

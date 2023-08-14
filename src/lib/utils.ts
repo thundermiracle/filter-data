@@ -44,6 +44,10 @@ function getObjValue(
   );
 }
 
+function timeDiff(value: Date, targetValue: string | number | boolean) {
+  return value.getTime() - new Date(targetValue.toString()).getTime();
+}
+
 export {
   listCombiner,
   compose,
@@ -56,4 +60,5 @@ export {
   drop,
   take,
   getObjValue,
+  timeDiff,
 };
