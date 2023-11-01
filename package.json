@@ -73,7 +73,7 @@
     "@web-configs/eslint-plugin": "^0.5.2",
     "@web-configs/prettier": "^0.1.2",
     "eslint": "^8.52.0",
-    "fuse.js": "^6.6.2",
+    "fuse.js": "^7.0.0",
     "jest": "^29.7.0",
     "match-sorter": "^6.3.1",
     "prettier": "^3.0.3",
