@@ -82,7 +82,7 @@
     "rollup-plugin-dts": "^6.1.0",
     "ts-toolbelt": "^9.6.0",
     "tslib": "^2.6.2",
-    "tsx": "^3.14.0",
+    "tsx": "^4.7.0",
     "typescript": "^5.2.2"
   },
   "prettier": "@web-configs/prettier"
