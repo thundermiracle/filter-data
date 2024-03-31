@@ -1,7 +1,7 @@
 {
   "name": "filter-data",
   "version": "0.5.1",
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@8.15.5",
   "description": "simple, fast data filter",
   "keywords": [
     "match-sorter",
@@ -68,8 +68,8 @@
     "@swc/core": "^1.4.2",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.11.24",
-    "@types/ramda": "^0.29.10",
+    "@types/node": "^20.12.2",
+    "@types/ramda": "^0.29.12",
     "@web-configs/eslint-plugin": "^0.5.2",
     "@web-configs/prettier": "^0.1.2",
     "eslint": "^8.57.0",
@@ -83,7 +83,7 @@
     "ts-toolbelt": "^9.6.0",
     "tslib": "^2.6.2",
     "tsx": "^4.7.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.3"
   },
   "prettier": "@web-configs/prettier"
 }
