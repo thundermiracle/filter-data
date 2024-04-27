@@ -1,5 +1,11 @@
 # filter-data
 
+## 0.6.0
+
+### Minor Changes
+
+- [#159](https://github.com/thundermiracle/filter-data/pull/159) [`f1290a8`](https://github.com/thundermiracle/filter-data/commit/f1290a8bf78d3014ca97aea373886d84fe063e97) Thanks [@thundermiracle](https://github.com/thundermiracle)! - feat! support from node 18
+
 ## 0.5.2
 
 ### Patch Changes
