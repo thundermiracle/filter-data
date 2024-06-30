@@ -1,7 +1,7 @@
 {
   "name": "filter-data",
   "version": "0.6.0",
-  "packageManager": "pnpm@9.1.4",
+  "packageManager": "pnpm@9.4.0",
   "description": "simple, fast data filter",
   "keywords": [
     "match-sorter",
@@ -56,19 +56,19 @@
     "cs:release": "pnpm build && changeset publish"
   },
   "dependencies": {
-    "ramda": "^0.30.0"
+    "ramda": "^0.30.1"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.5",
+    "@changesets/cli": "^2.27.6",
     "@rollup/plugin-commonjs": "^25.0.8",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
-    "@swc/core": "^1.5.24",
+    "@swc/core": "^1.6.6",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.13.0",
+    "@types/node": "^20.14.9",
     "@types/ramda": "^0.30.0",
     "@web-configs/eslint-plugin": "^0.5.2",
     "@web-configs/prettier": "^0.1.2",
@@ -81,9 +81,9 @@
     "rollup": "^3.29.4",
     "rollup-plugin-dts": "^6.1.1",
     "ts-toolbelt": "^9.6.0",
-    "tslib": "^2.6.2",
-    "tsx": "^4.11.0",
-    "typescript": "^5.4.5"
+    "tslib": "^2.6.3",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.2"
   },
   "prettier": "@web-configs/prettier"
 }
