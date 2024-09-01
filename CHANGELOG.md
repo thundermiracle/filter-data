@@ -1,5 +1,82 @@
 # filter-data
 
+## 0.6.1
+
+### Patch Changes
+
+- [#176](https://github.com/thundermiracle/filter-data/pull/176) [`ea15c75`](https://github.com/thundermiracle/filter-data/commit/ea15c75027276979436590338fe60bd40a59c9ec) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier` to `^3.3.3`.
+
+- [#177](https://github.com/thundermiracle/filter-data/pull/177) [`72dc3da`](https://github.com/thundermiracle/filter-data/commit/72dc3dae976a7ad68bb788d94a67d78389079b6c) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.6.0`.
+  Updated dependency `@swc/core` to `^1.7.3`.
+  Updated dependency `@types/node` to `^20.14.13`.
+  Updated dependency `@types/ramda` to `^0.30.1`.
+  Updated dependency `rimraf` to `^5.0.9`.
+  Updated dependency `tsx` to `^4.16.3`.
+  Updated dependency `typescript` to `^5.5.4`.
+
+- [#174](https://github.com/thundermiracle/filter-data/pull/174) [`5a7f793`](https://github.com/thundermiracle/filter-data/commit/5a7f7936f82a47ad7b08b0b423201aa458683f13) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@changesets/cli` to `^2.27.7`.
+
+- [#179](https://github.com/thundermiracle/filter-data/pull/179) [`6254e39`](https://github.com/thundermiracle/filter-data/commit/6254e397135b91134d6514f7a256a2f092f3bc79) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `rimraf` to `^6.0.1`.
+
+- [#175](https://github.com/thundermiracle/filter-data/pull/175) [`ca07b4a`](https://github.com/thundermiracle/filter-data/commit/ca07b4aea5039641f0a34f5983236bb9929605ff) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `typescript` to `^5.5.3`.
+
+- [#183](https://github.com/thundermiracle/filter-data/pull/183) [`ecaccc3`](https://github.com/thundermiracle/filter-data/commit/ecaccc3365b49c2c467a50f860e90681068603fc) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `^20.16.3`.
+
+- [#169](https://github.com/thundermiracle/filter-data/pull/169) [`051d9c3`](https://github.com/thundermiracle/filter-data/commit/051d9c3f8a80af9656ac2807cd52675554a56a1e) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `^20.13.0`.
+
+- [#161](https://github.com/thundermiracle/filter-data/pull/161) [`8020d74`](https://github.com/thundermiracle/filter-data/commit/8020d742cb13921fd1f9ee5728595b3bbe962090) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@8.15.8`.
+  Updated dependency `ramda` to `^0.30.0`.
+  Updated dependency `@swc/core` to `^1.4.17`.
+  Updated dependency `@types/node` to `^20.12.7`.
+  Updated dependency `tsx` to `^4.7.3`.
+  Updated dependency `typescript` to `^5.4.5`.
+
+- [#165](https://github.com/thundermiracle/filter-data/pull/165) [`27e7565`](https://github.com/thundermiracle/filter-data/commit/27e756552835944688f906167f85b27f7e2c9209) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `tsx` to `^4.8.2`.
+
+- [#182](https://github.com/thundermiracle/filter-data/pull/182) [`f9c46eb`](https://github.com/thundermiracle/filter-data/commit/f9c46ebcd7365ccd978d91350845f1f274fcbca2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.9.0`.
+  Updated dependency `@swc/core` to `^1.7.22`.
+  Updated dependency `@types/node` to `^20.16.2`.
+  Updated dependency `@types/ramda` to `^0.30.2`.
+  Updated dependency `tslib` to `^2.7.0`.
+  Updated dependency `tsx` to `^4.19.0`.
+
+- [#171](https://github.com/thundermiracle/filter-data/pull/171) [`1230fad`](https://github.com/thundermiracle/filter-data/commit/1230fadf8e8760ac37afed91caea744adeb487ce) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.4.0`.
+  Updated dependency `ramda` to `^0.30.1`.
+  Updated dependency `@changesets/cli` to `^2.27.6`.
+  Updated dependency `@swc/core` to `^1.6.6`.
+  Updated dependency `@types/node` to `^20.14.9`.
+  Updated dependency `tslib` to `^2.6.3`.
+  Updated dependency `tsx` to `^4.16.0`.
+  Updated dependency `typescript` to `^5.5.2`.
+
+- [#172](https://github.com/thundermiracle/filter-data/pull/172) [`05b9f38`](https://github.com/thundermiracle/filter-data/commit/05b9f386429a9bdcf6b6a6a4d5e257099910704f) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier` to `^3.3.2`.
+
+- [#181](https://github.com/thundermiracle/filter-data/pull/181) [`6afcc91`](https://github.com/thundermiracle/filter-data/commit/6afcc91ae2452fcb2d48fbccbe1a6580222e867a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `^1.7.5`.
+  Updated dependency `@types/node` to `^20.14.14`.
+
+- [#166](https://github.com/thundermiracle/filter-data/pull/166) [`280afe9`](https://github.com/thundermiracle/filter-data/commit/280afe965bd25dad41d09c554d621e1393ec64e2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `^20.12.8`.
+
+- [#168](https://github.com/thundermiracle/filter-data/pull/168) [`da04a25`](https://github.com/thundermiracle/filter-data/commit/da04a25379a5483250c1f03d18306fb997bb90c2) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `^20.12.14`.
+
+- [#164](https://github.com/thundermiracle/filter-data/pull/164) [`1082acf`](https://github.com/thundermiracle/filter-data/commit/1082acfde8cba5281b5a9dc65afd49deff967cf8) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.0.6`.
+
+- [#167](https://github.com/thundermiracle/filter-data/pull/167) [`1f31cd5`](https://github.com/thundermiracle/filter-data/commit/1f31cd5b77f1a6c41e98217bbcb663f9c862d874) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.1.4`.
+  Updated dependency `@changesets/cli` to `^2.27.5`.
+  Updated dependency `@rollup/plugin-commonjs` to `^25.0.8`.
+  Updated dependency `@swc/core` to `^1.5.24`.
+  Updated dependency `@types/node` to `^20.12.13`.
+  Updated dependency `@types/ramda` to `^0.30.0`.
+  Updated dependency `rimraf` to `^5.0.7`.
+  Updated dependency `rollup-plugin-dts` to `^6.1.1`.
+  Updated dependency `tsx` to `^4.11.0`.
+
+- [#180](https://github.com/thundermiracle/filter-data/pull/180) [`4e8dfd5`](https://github.com/thundermiracle/filter-data/commit/4e8dfd5afac56172e84a11742a64ec34a77f8123) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `rimraf` to `^5.0.10`.
+  Updated dependency `tsx` to `^4.16.5`.
+
+- [#170](https://github.com/thundermiracle/filter-data/pull/170) [`712ae6d`](https://github.com/thundermiracle/filter-data/commit/712ae6d08914186d2507ef9f2c1a50d7f8f9249b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier` to `^3.3.0`.
+
+- [#178](https://github.com/thundermiracle/filter-data/pull/178) [`ba4d277`](https://github.com/thundermiracle/filter-data/commit/ba4d277268e5beec0d5d62e829f16c3c1d5083b3) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `^1.7.4`.
+
 ## 0.6.0
 
 ### Minor Changes
