@@ -1,6 +1,6 @@
 {
   "name": "filter-data",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "packageManager": "pnpm@9.9.0",
   "description": "simple, fast data filter",
   "keywords": [
