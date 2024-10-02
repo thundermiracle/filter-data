@@ -1,5 +1,22 @@
 # filter-data
 
+## 0.6.2
+
+### Patch Changes
+
+- [#184](https://github.com/thundermiracle/filter-data/pull/184) [`4b04747`](https://github.com/thundermiracle/filter-data/commit/4b047476a2179b1e2a62663ba18f8b31cbe70c69) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.11.0`.
+  Updated dependency `@changesets/cli` to `^2.27.8`.
+  Updated dependency `@rollup/plugin-node-resolve` to `^15.3.0`.
+  Updated dependency `@swc/core` to `^1.7.26`.
+  Updated dependency `@types/node` to `^20.16.10`.
+  Updated dependency `rollup` to `^3.29.5`.
+  Updated dependency `tsx` to `^4.19.1`.
+  Updated dependency `typescript` to `^5.6.2`.
+
+- [#185](https://github.com/thundermiracle/filter-data/pull/185) [`9bec59e`](https://github.com/thundermiracle/filter-data/commit/9bec59e8b01cc64b084266bcb59bc89edd9122e1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/jest` to `^29.5.13`.
+
+- [#187](https://github.com/thundermiracle/filter-data/pull/187) [`620adc7`](https://github.com/thundermiracle/filter-data/commit/620adc7f3c17c9debb65edeb8de4fc1f302f1715) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint` to `^8.57.1`.
+
 ## 0.6.1
 
 ### Patch Changes
