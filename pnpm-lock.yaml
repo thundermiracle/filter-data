@@ -29,7 +29,7 @@ importers:
         version: 0.4.4(rollup@3.29.5)
       '@rollup/plugin-typescript':
         specifier: ^11.1.6
-        version: 11.1.6(rollup@3.29.5)(tslib@2.8.0)(typescript@5.6.3)
+        version: 11.1.6(rollup@3.29.5)(tslib@2.8.1)(typescript@5.6.3)
       '@swc/core':
         specifier: ^1.7.42
         version: 1.7.42
@@ -79,8 +79,8 @@ importers:
         specifier: ^9.6.0
         version: 9.6.0
       tslib:
-        specifier: ^2.8.0
-        version: 2.8.0
+        specifier: ^2.8.1
+        version: 2.8.1
       tsx:
         specifier: ^4.19.2
         version: 4.19.2
@@ -3138,8 +3138,8 @@ packages:
   tslib@2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
 
-  tslib@2.8.0:
-    resolution: {integrity: sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==}
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
   tsutils@3.21.0:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -3842,7 +3842,7 @@ snapshots:
       graphql-config: 4.5.0(@types/node@20.17.5)(graphql@15.8.0)
       graphql-depth-limit: 1.1.0(graphql@15.8.0)
       lodash.lowercase: 4.3.0
-      tslib: 2.8.0
+      tslib: 2.8.1
     transitivePeerDependencies:
       - '@types/node'
       - bufferutil
@@ -3856,7 +3856,7 @@ snapshots:
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       dataloader: 2.1.0
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
       value-or-promise: 1.0.11
 
   '@graphql-tools/code-file-loader@7.3.8(graphql@15.8.0)':
@@ -3865,7 +3865,7 @@ snapshots:
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       globby: 11.1.0
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
       unixify: 1.0.0
     transitivePeerDependencies:
       - supports-color
@@ -3893,7 +3893,7 @@ snapshots:
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       globby: 11.1.0
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
       unixify: 1.0.0
 
   '@graphql-tools/graphql-tag-pluck@7.3.8(graphql@15.8.0)':
@@ -3903,7 +3903,7 @@ snapshots:
       '@babel/types': 7.22.10
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
     transitivePeerDependencies:
       - supports-color
 
@@ -3912,14 +3912,14 @@ snapshots:
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       graphql: 15.8.0
       resolve-from: 5.0.0
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@graphql-tools/json-file-loader@7.4.8(graphql@15.8.0)':
     dependencies:
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       globby: 11.1.0
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
       unixify: 1.0.0
 
   '@graphql-tools/load@7.8.2(graphql@15.8.0)':
@@ -3928,20 +3928,20 @@ snapshots:
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       graphql: 15.8.0
       p-limit: 3.1.0
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@graphql-tools/merge@8.3.8(graphql@15.8.0)':
     dependencies:
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@graphql-tools/schema@9.0.6(graphql@15.8.0)':
     dependencies:
       '@graphql-tools/merge': 8.3.8(graphql@15.8.0)
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
       value-or-promise: 1.0.11
 
   '@graphql-tools/url-loader@7.16.6(@types/node@20.17.5)(graphql@15.8.0)':
@@ -3958,7 +3958,7 @@ snapshots:
       graphql-ws: 5.11.2(graphql@15.8.0)
       isomorphic-ws: 5.0.0(ws@8.10.0)
       meros: 1.1.4(@types/node@20.17.5)
-      tslib: 2.8.0
+      tslib: 2.8.1
       value-or-promise: 1.0.11
       ws: 8.10.0
     transitivePeerDependencies:
@@ -3970,13 +3970,13 @@ snapshots:
   '@graphql-tools/utils@8.13.1(graphql@15.8.0)':
     dependencies:
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@graphql-tools/utils@9.2.1(graphql@15.8.0)':
     dependencies:
       '@graphql-typed-document-node/core': 3.1.1(graphql@15.8.0)
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@graphql-tools/wrap@9.2.5(graphql@15.8.0)':
     dependencies:
@@ -3984,7 +3984,7 @@ snapshots:
       '@graphql-tools/schema': 9.0.6(graphql@15.8.0)
       '@graphql-tools/utils': 8.13.1(graphql@15.8.0)
       graphql: 15.8.0
-      tslib: 2.8.0
+      tslib: 2.8.1
       value-or-promise: 1.0.11
 
   '@graphql-typed-document-node/core@3.1.1(graphql@15.8.0)':
@@ -4253,18 +4253,18 @@ snapshots:
     dependencies:
       asn1js: 3.0.5
       pvtsutils: 1.3.2
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@peculiar/json-schema@1.1.12':
     dependencies:
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@peculiar/webcrypto@1.4.0':
     dependencies:
       '@peculiar/asn1-schema': 2.3.0
       '@peculiar/json-schema': 1.1.12
       pvtsutils: 1.3.2
-      tslib: 2.8.0
+      tslib: 2.8.1
       webcrypto-core: 1.7.5
 
   '@pkgjs/parseargs@0.11.0':
@@ -4277,7 +4277,7 @@ snapshots:
       is-glob: 4.0.3
       open: 9.1.0
       picocolors: 1.1.0
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@rollup/plugin-commonjs@25.0.8(rollup@3.29.5)':
     dependencies:
@@ -4308,14 +4308,14 @@ snapshots:
     optionalDependencies:
       rollup: 3.29.5
 
-  '@rollup/plugin-typescript@11.1.6(rollup@3.29.5)(tslib@2.8.0)(typescript@5.6.3)':
+  '@rollup/plugin-typescript@11.1.6(rollup@3.29.5)(tslib@2.8.1)(typescript@5.6.3)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@3.29.5)
       resolve: 1.22.4
       typescript: 5.6.3
     optionalDependencies:
       rollup: 3.29.5
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   '@rollup/pluginutils@5.1.0(rollup@3.29.5)':
     dependencies:
@@ -4762,7 +4762,7 @@ snapshots:
     dependencies:
       pvtsutils: 1.3.2
       pvutils: 1.1.3
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   ast-types-flow@0.0.7: {}
 
@@ -4889,7 +4889,7 @@ snapshots:
   camel-case@4.1.2:
     dependencies:
       pascal-case: 3.1.2
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   camelcase@5.3.1: {}
 
@@ -4902,7 +4902,7 @@ snapshots:
   capital-case@1.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
       upper-case-first: 2.0.2
 
   chalk@2.4.2:
@@ -4929,7 +4929,7 @@ snapshots:
       path-case: 3.0.4
       sentence-case: 3.0.4
       snake-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   char-regex@1.0.2: {}
 
@@ -4972,7 +4972,7 @@ snapshots:
   constant-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
       upper-case: 2.0.2
 
   convert-source-map@1.8.0:
@@ -5098,7 +5098,7 @@ snapshots:
   dot-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   dotenv@8.6.0: {}
 
@@ -5747,7 +5747,7 @@ snapshots:
       jiti: 1.17.1
       minimatch: 4.2.3
       string-env-interpolation: 1.0.1
-      tslib: 2.8.0
+      tslib: 2.8.1
     transitivePeerDependencies:
       - '@types/node'
       - bufferutil
@@ -5790,7 +5790,7 @@ snapshots:
   header-case@2.0.4:
     dependencies:
       capital-case: 1.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   html-escaper@2.0.2: {}
 
@@ -6397,7 +6397,7 @@ snapshots:
 
   lower-case@2.0.2:
     dependencies:
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   lru-cache@11.0.0: {}
 
@@ -6485,7 +6485,7 @@ snapshots:
   no-case@3.0.4:
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   node-domexception@1.0.0: {}
 
@@ -6624,7 +6624,7 @@ snapshots:
   param-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   parent-module@1.0.1:
     dependencies:
@@ -6640,12 +6640,12 @@ snapshots:
   pascal-case@3.1.2:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   path-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   path-exists@4.0.0: {}
 
@@ -6711,7 +6711,7 @@ snapshots:
 
   pvtsutils@1.3.2:
     dependencies:
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   pvutils@1.1.3: {}
 
@@ -6826,7 +6826,7 @@ snapshots:
   sentence-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
       upper-case-first: 2.0.2
 
   serialize-javascript@6.0.1:
@@ -6864,7 +6864,7 @@ snapshots:
   snake-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   source-map-support@0.5.13:
     dependencies:
@@ -6980,7 +6980,7 @@ snapshots:
   synckit@0.8.5:
     dependencies:
       '@pkgr/utils': 2.4.2
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   term-size@2.2.1: {}
 
@@ -7032,7 +7032,7 @@ snapshots:
 
   tslib@2.4.1: {}
 
-  tslib@2.8.0: {}
+  tslib@2.8.1: {}
 
   tsutils@3.21.0(typescript@5.6.3):
     dependencies:
@@ -7103,11 +7103,11 @@ snapshots:
 
   upper-case-first@2.0.2:
     dependencies:
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   upper-case@2.0.2:
     dependencies:
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   uri-js@4.4.1:
     dependencies:
@@ -7135,7 +7135,7 @@ snapshots:
       '@peculiar/json-schema': 1.1.12
       asn1js: 3.0.5
       pvtsutils: 1.3.2
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   webidl-conversions@3.0.1: {}
 
