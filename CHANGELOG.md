@@ -1,5 +1,77 @@
 # filter-data
 
+## 0.6.2
+
+### Patch Changes
+
+- [#200](https://github.com/thundermiracle/filter-data/pull/200) [`6677d90`](https://github.com/thundermiracle/filter-data/commit/6677d90d047e5bc54db2e9d4834373983acec61a) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.15.2`.
+  Updated dependency `@changesets/cli` to `^2.27.11`.
+  Updated dependency `@rollup/plugin-node-resolve` to `^15.3.1`.
+  Updated dependency `@swc/core` to `^1.10.4`.
+  Updated dependency `@types/node` to `^20.17.10`.
+
+- [#201](https://github.com/thundermiracle/filter-data/pull/201) [`2de0230`](https://github.com/thundermiracle/filter-data/commit/2de0230a5993e4fc4f2f0523d06dddfa5538a1ae) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier` to `^3.4.2`.
+
+- [#209](https://github.com/thundermiracle/filter-data/pull/209) [`bc72b1a`](https://github.com/thundermiracle/filter-data/commit/bc72b1a68617a3edda1f3bcf0cd4e27d7dd03b2b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `^1.11.16`.
+  Updated dependency `@types/node` to `^20.17.30`.
+
+- [#205](https://github.com/thundermiracle/filter-data/pull/205) [`077a5f8`](https://github.com/thundermiracle/filter-data/commit/077a5f8e3aac78722f3e679bc898c4802d85aaa8) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.15.9`.
+  Updated dependency `@changesets/changelog-github` to `^0.5.1`.
+  Updated dependency `@changesets/cli` to `^2.28.1`.
+  Updated dependency `@swc/core` to `^1.11.11`.
+  Updated dependency `@types/node` to `^20.17.25`.
+  Updated dependency `fuse.js` to `^7.1.0`.
+  Updated dependency `rollup-plugin-dts` to `^6.2.1`.
+  Updated dependency `tsx` to `^4.19.3`.
+  Updated dependency `typescript` to `^5.8.2`.
+
+- [#204](https://github.com/thundermiracle/filter-data/pull/204) [`c2e876f`](https://github.com/thundermiracle/filter-data/commit/c2e876f4ccf540e73a2e9194b4380fdbcd7abda0) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.15.4`.
+  Updated dependency `@changesets/cli` to `^2.27.12`.
+  Updated dependency `@swc/core` to `^1.10.12`.
+  Updated dependency `@types/node` to `^20.17.16`.
+  Updated dependency `typescript` to `^5.7.3`.
+
+- [#191](https://github.com/thundermiracle/filter-data/pull/191) [`f5a1670`](https://github.com/thundermiracle/filter-data/commit/f5a16704113f3ef3cea0e08b4e183e3e6c1fac54) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.12.3`.
+  Updated dependency `@changesets/cli` to `^2.27.9`.
+  Updated dependency `@swc/core` to `^1.7.42`.
+  Updated dependency `@swc/jest` to `^0.2.37`.
+  Updated dependency `@types/node` to `^20.17.5`.
+  Updated dependency `tslib` to `^2.8.0`.
+  Updated dependency `tsx` to `^4.19.2`.
+  Updated dependency `typescript` to `^5.6.3`.
+
+- [#207](https://github.com/thundermiracle/filter-data/pull/207) [`a435a1c`](https://github.com/thundermiracle/filter-data/commit/a435a1cc0e12834a4abc518c444a6eeb8c6202ea) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@swc/core` to `^1.11.13`.
+  Updated dependency `@types/node` to `^20.17.28`.
+
+- [#184](https://github.com/thundermiracle/filter-data/pull/184) [`4b04747`](https://github.com/thundermiracle/filter-data/commit/4b047476a2179b1e2a62663ba18f8b31cbe70c69) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.11.0`.
+  Updated dependency `@changesets/cli` to `^2.27.8`.
+  Updated dependency `@rollup/plugin-node-resolve` to `^15.3.0`.
+  Updated dependency `@swc/core` to `^1.7.26`.
+  Updated dependency `@types/node` to `^20.16.10`.
+  Updated dependency `rollup` to `^3.29.5`.
+  Updated dependency `tsx` to `^4.19.1`.
+  Updated dependency `typescript` to `^5.6.2`.
+
+- [#185](https://github.com/thundermiracle/filter-data/pull/185) [`9bec59e`](https://github.com/thundermiracle/filter-data/commit/9bec59e8b01cc64b084266bcb59bc89edd9122e1) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/jest` to `^29.5.13`.
+
+- [#203](https://github.com/thundermiracle/filter-data/pull/203) [`d2f070b`](https://github.com/thundermiracle/filter-data/commit/d2f070bef1a650f38dcb08ba19dccfe512566da7) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/node` to `^20.17.11`.
+
+- [#206](https://github.com/thundermiracle/filter-data/pull/206) [`584fd6e`](https://github.com/thundermiracle/filter-data/commit/584fd6e6875c691051363aa5bdf6424d8951929b) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier` to `^3.5.3`.
+
+- [#195](https://github.com/thundermiracle/filter-data/pull/195) [`626caa1`](https://github.com/thundermiracle/filter-data/commit/626caa1fdc4579fe3d4f43d3625b062e50f1a8ea) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `tslib` to `^2.8.1`.
+
+- [#192](https://github.com/thundermiracle/filter-data/pull/192) [`ae3327a`](https://github.com/thundermiracle/filter-data/commit/ae3327a9b054ed841ad34800663fbf312d66c7a5) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `@types/jest` to `^29.5.14`.
+
+- [#196](https://github.com/thundermiracle/filter-data/pull/196) [`2281c10`](https://github.com/thundermiracle/filter-data/commit/2281c108ff6b149069fa3c4e9c4b71f620e76980) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `packageManager` to `pnpm@9.14.4`.
+  Updated dependency `@changesets/cli` to `^2.27.10`.
+  Updated dependency `@swc/core` to `^1.9.3`.
+  Updated dependency `@types/node` to `^20.17.9`.
+  Updated dependency `typescript` to `^5.7.2`.
+
+- [#197](https://github.com/thundermiracle/filter-data/pull/197) [`a6a97d5`](https://github.com/thundermiracle/filter-data/commit/a6a97d5fcde20a7271b62de5a500470786efef42) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `prettier` to `^3.4.1`.
+
+- [#187](https://github.com/thundermiracle/filter-data/pull/187) [`620adc7`](https://github.com/thundermiracle/filter-data/commit/620adc7f3c17c9debb65edeb8de4fc1f302f1715) Thanks [@renovate](https://github.com/apps/renovate)! - Updated dependency `eslint` to `^8.57.1`.
+
 ## 0.6.1
 
 ### Patch Changes
