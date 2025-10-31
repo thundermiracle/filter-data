@@ -61,8 +61,8 @@ importers:
         specifier: ^30.2.0
         version: 30.2.0(@types/node@20.19.24)
       match-sorter:
-        specifier: ^6.3.4
-        version: 6.3.4
+        specifier: ^8.1.0
+        version: 8.1.0
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -2643,8 +2643,8 @@ packages:
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
 
-  match-sorter@6.3.4:
-    resolution: {integrity: sha512-jfZW7cWS5y/1xswZo8VBOdudUiSd9nifYRWphc9M5D/ee4w4AoXLgBEdRbgVaxbMuagBPeUC5y2Hi8DO6o9aDg==}
+  match-sorter@8.1.0:
+    resolution: {integrity: sha512-0HX3BHPixkbECX+Vt7nS1vJ6P2twPgGTU3PMXjWrl1eyVCL24tFHeyYN1FN5RKLzve0TyzNI9qntqQGbebnfPQ==}
 
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -3517,7 +3517,7 @@ snapshots:
       eslint-visitor-keys: 2.1.0
       semver: 6.3.1
 
-  '@babel/eslint-plugin@7.22.5(@babel/eslint-parser@7.22.10(@babel/core@7.28.0)(eslint@8.57.1))(eslint@8.57.1)':
+  '@babel/eslint-plugin@7.22.5(@babel/eslint-parser@7.22.10(@babel/core@7.22.10)(eslint@8.57.1))(eslint@8.57.1)':
     dependencies:
       '@babel/eslint-parser': 7.22.10(@babel/core@7.22.10)(eslint@8.57.1)
       eslint: 8.57.1
@@ -4873,7 +4873,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.22.10
       '@babel/eslint-parser': 7.22.10(@babel/core@7.22.10)(eslint@8.57.1)
-      '@babel/eslint-plugin': 7.22.5(@babel/eslint-parser@7.22.10(@babel/core@7.28.0)(eslint@8.57.1))(eslint@8.57.1)
+      '@babel/eslint-plugin': 7.22.5(@babel/eslint-parser@7.22.10(@babel/core@7.22.10)(eslint@8.57.1))(eslint@8.57.1)
       '@graphql-eslint/eslint-plugin': 3.20.1(@types/node@20.19.24)(graphql@15.8.0)
       '@typescript-eslint/eslint-plugin': 6.3.0(@typescript-eslint/parser@6.3.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       '@typescript-eslint/parser': 6.3.0(eslint@8.57.1)(typescript@5.9.3)
@@ -6707,7 +6707,7 @@ snapshots:
     dependencies:
       tmpl: 1.0.5
 
-  match-sorter@6.3.4:
+  match-sorter@8.1.0:
     dependencies:
       '@babel/runtime': 7.23.8
       remove-accents: 0.5.0
