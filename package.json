@@ -75,7 +75,7 @@
     "eslint": "^8.57.1",
     "fuse.js": "^7.1.0",
     "jest": "^30.2.0",
-    "match-sorter": "^6.3.4",
+    "match-sorter": "^8.1.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.1.0",
     "rollup": "^3.29.5",
