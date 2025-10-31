@@ -28,8 +28,8 @@ importers:
         specifier: ^0.4.4
         version: 0.4.4(rollup@3.29.5)
       '@rollup/plugin-typescript':
-        specifier: ^11.1.6
-        version: 11.1.6(rollup@3.29.5)(tslib@2.8.1)(typescript@5.9.3)
+        specifier: ^12.3.0
+        version: 12.3.0(rollup@3.29.5)(tslib@2.8.1)(typescript@5.9.3)
       '@swc/core':
         specifier: ^1.14.0
         version: 1.14.0
@@ -867,8 +867,8 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/plugin-typescript@11.1.6':
-    resolution: {integrity: sha512-R92yOmIACgYdJ7dJ97p4K69I8gg6IEHt8M7dUBxN3W6nrO8uUxX5ixl0yU/N3aZTi8WhPuICvOHXQvF6FaykAA==}
+  '@rollup/plugin-typescript@12.3.0':
+    resolution: {integrity: sha512-7DP0/p7y3t67+NabT9f8oTBFE6gGkto4SA6Np2oudYmZE/m1dt8RB0SjL1msMxFpLo631qjRCcBlAbq1ml/Big==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^2.14.0||^3.0.0||^4.0.0
@@ -3517,7 +3517,7 @@ snapshots:
       eslint-visitor-keys: 2.1.0
       semver: 6.3.1
 
-  '@babel/eslint-plugin@7.22.5(@babel/eslint-parser@7.22.10(@babel/core@7.28.0)(eslint@8.57.1))(eslint@8.57.1)':
+  '@babel/eslint-plugin@7.22.5(@babel/eslint-parser@7.22.10(@babel/core@7.22.10)(eslint@8.57.1))(eslint@8.57.1)':
     dependencies:
       '@babel/eslint-parser': 7.22.10(@babel/core@7.22.10)(eslint@8.57.1)
       eslint: 8.57.1
@@ -4518,7 +4518,7 @@ snapshots:
     optionalDependencies:
       rollup: 3.29.5
 
-  '@rollup/plugin-typescript@11.1.6(rollup@3.29.5)(tslib@2.8.1)(typescript@5.9.3)':
+  '@rollup/plugin-typescript@12.3.0(rollup@3.29.5)(tslib@2.8.1)(typescript@5.9.3)':
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@3.29.5)
       resolve: 1.22.4
@@ -4873,7 +4873,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.22.10
       '@babel/eslint-parser': 7.22.10(@babel/core@7.22.10)(eslint@8.57.1)
-      '@babel/eslint-plugin': 7.22.5(@babel/eslint-parser@7.22.10(@babel/core@7.28.0)(eslint@8.57.1))(eslint@8.57.1)
+      '@babel/eslint-plugin': 7.22.5(@babel/eslint-parser@7.22.10(@babel/core@7.22.10)(eslint@8.57.1))(eslint@8.57.1)
       '@graphql-eslint/eslint-plugin': 3.20.1(@types/node@20.19.24)(graphql@15.8.0)
       '@typescript-eslint/eslint-plugin': 6.3.0(@typescript-eslint/parser@6.3.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       '@typescript-eslint/parser': 6.3.0(eslint@8.57.1)(typescript@5.9.3)
