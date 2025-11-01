@@ -68,7 +68,7 @@
     "@swc/core": "^1.14.0",
     "@swc/jest": "^0.2.39",
     "@types/jest": "^30.0.0",
-    "@types/node": "^20.19.24",
+    "@types/node": "^24.9.2",
     "@types/ramda": "^0.31.1",
     "@web-configs/eslint-plugin": "^0.5.2",
     "@web-configs/prettier": "^0.1.2",
